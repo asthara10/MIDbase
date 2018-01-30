@@ -12,4 +12,4 @@ ID_Disease	DiseaseName	ID_MIM
 11	Koolen-de_Vries_syndrome(KDVS)	610443
 12		
 13		
-14	neurofibromatosis1(NF1) 613675
+14	neurofibromatosis1(NF1)	613675

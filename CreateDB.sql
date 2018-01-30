@@ -88,16 +88,6 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `miod`.`Inheritance`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `miod`.`Inheritance` (
-  `idInheritance` INT NOT NULL,
-  `Value` VARCHAR(45) NULL,
-  PRIMARY KEY (`idInheritance`))
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
 -- Table `miod`.`References`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `miod`.`References` (
@@ -105,28 +95,6 @@ CREATE TABLE IF NOT EXISTS `miod`.`References` (
   `Reference` INT(11) NULL,
   `Database` VARCHAR(45) NULL,
   PRIMARY KEY (`idReferences`))
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `miod`.`Disease_has_Inheritance`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `miod`.`Disease_has_Inheritance` (
-  `Disease_idDisease` INT NOT NULL,
-  `Inheritance_idInheritance` INT NOT NULL,
-  PRIMARY KEY (`Disease_idDisease`, `Inheritance_idInheritance`),
-  INDEX `fk_Disease_has_Inheritance_Inheritance1_idx` (`Inheritance_idInheritance` ASC),
-  INDEX `fk_Disease_has_Inheritance_Disease1_idx` (`Disease_idDisease` ASC),
-  CONSTRAINT `fk_Disease_has_Inheritance_Disease1`
-    FOREIGN KEY (`Disease_idDisease`)
-    REFERENCES `miod`.`Disease` (`idDisease`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_Disease_has_Inheritance_Inheritance1`
-    FOREIGN KEY (`Inheritance_idInheritance`)
-    REFERENCES `miod`.`Inheritance` (`idInheritance`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
