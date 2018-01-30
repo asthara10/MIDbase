@@ -12,34 +12,46 @@
 <body>
 	<div class="container">
 		<p id="com_text">Fill in the form below:</p>
-		<div class="container" class="form">
-			<form method="post" action="submit_data.php" name="input">
-			<p><label>Microindel Name<input placeholder="Microindel name" type="text" name="microindel_name" required></label></p>
-			<p><label>Microindel Information<input placeholder="Microindel extra information" type="text" name="microindel_info"></label></p>
-			<p><label>Gene<input placeholder="Gene name" type="text" name="gene"></label></p>
-			<p><label>Gene Ensmbl ID<input placeholder="Ensmbl ID of the gene" type="text" name="EnsmblID"></label></p>
-			<p><label>Start Positon<input placeholder="start position of the microindel" type="text" name="start"></label></p>
-			<p><label>End Positon<input placeholder="end position of the microindel" type="text" name="end"></label></p>
-			<p><label>Cytogenetic Location<input placeholder="cytogenetic location of the microindel" type="text" name="cytogen"></label></p>
-			<p><label>Strand<input placeholder="strand of the microindel" type="text" name="strand"></label></p>
-			<p><label>Clinical Significance<input placeholder="Choose one of the folowing values" type="radio" name="clin_sig" value="association">Association</label></p>
-			<p><label>Clinical Significance<input placeholder="Choose one of the folowing values" type="radio" name="clin_sig" value="benign"></label>Benign</p>
-			<p><label>Clinical Significance<input placeholder="Choose one of the folowing values" type="radio" name="clin_sig" value="sensitivity">Confers Sensitivity</label></p>
-			<p><label>Clinical Significance<input placeholder="Choose one of the folowing values" type="radio" name="clin_sig" value="drug_response">Drug Response</label></p>
-			<p><label>Clinical Significance<input placeholder="Choose one of the folowing values" type="radio" name="clin_sig" value="uncertain">Uncertain Significance</label></p>
-			<p><label>Clinical Significance<input placeholder="Choose one of the folowing values" type="radio" name="clin_sig" value="likely_benign">Likely Benign</label></p>
-			<p><label>Clinical Significance<input placeholder="Choose one of the folowing values" type="radio" name="clin_sig" value="likely_pathogenic">Likely Pathogenic</label></p>
-			<p><label>Clinical Significance<input placeholder="Choose one of the folowing values" type="radio" name="clin_sig" value="not_provided">Not provided</label></p>
-			<p><label>Clinical Significance<input placeholder="Choose one of the folowing values" type="radio" name="clin_sig" value="other">Other</label></p>
-			<p><label>Clinical Significance<input placeholder="Choose one of the folowing values" type="radio" name="clin_sig" value="pathogenic">Pathogenic</label></p>
-			<p><label>Clinical Significance<input placeholder="Choose one of the folowing values" type="radio" name="clin_sig" value="protective">Protective</label></p>
-			<p><label>Clinical Significance<input placeholder="Choose one of the folowing values" type="radio" name="clin_sig" value="risk"></label>Risk Factor</p>
-			<p><label>PMID<input placeholder="PubMed ID" type="text" name="PMID"></label></p>
-			<p><label>Disease<input placeholder="Disease name related to the microindel" type="text" name="disease"></label></p>
-			<p><label>IDMIM<input placeholder="OMIM ID of the disease" type="text" name="disease"></label></p>
-			<p><button id="submit">Submit</button></p>
-			</form>
-		</div>
+		<form method="post" action="submit_data.php" name="input">
+			<div class="container" class="form">
+				<label>Microindel Name</label><input placeholder="Microindel name" type="text" name="microindel_name" required>
+				<label>Microindel Information</label><input placeholder="Microindel extra information" type="text" name="microindel_info">
+			</div>
+			<div class="container" class="form">
+				<label>Gene</label><input placeholder="Gene name" type="text" name="gene">
+				<label>Gene Ensmbl ID</label><input placeholder="Ensmbl ID of the gene" type="text" name="EnsmblID">
+			</div>
+			<div class="container" class="form">				
+				<label>Start Positon</label><input placeholder="start position of the microindel" type="text" name="start">
+				<label>End Positon</label><input placeholder="end position of the microindel" type="text" name="end">
+				<label>Cytogenetic Location</label><input placeholder="cytogenetic location of the microindel" type="text" name="cytogen">
+				<label>Strand</label><input placeholder="strand of the microindel" type="text" name="strand">
+			</div>
+			<div class="container" class="form">
+				<label>Clinical Significance</label><select name="clin_sig">
+					<option value="benign">Benign</option>
+					<option value="likely_benign">Likely Benign</option>
+					<option value="association">Association</option>
+					<option value="sensitivity">Confers Sensitivity</option>
+					<option value="drug_res">Drug Response</option>
+					<option value="protective">Protective</option>
+					<option value="risk">Risk Factor</option>
+					<option value="likely_pathogenic">Likely Pathogenic</option>
+					<option value="pathogenic">Pathogenic</option>
+					<option value="uncertain">Uncertain Significance</option>
+					<option value="not_provided">Not provided</option>
+					<option value="other">Other</option>
+				</select>
+			</div>
+			<div class="container" class="form">	
+				<label>PMID</label><input placeholder="PubMed ID" type="text" name="PMID">
+			</div>
+			<div class="container" class="form">
+				<label>Disease</label><input placeholder="Disease name related to the microindel" type="text" name="disease">
+				<label>IDMIM</label><input placeholder="OMIM ID of the disease" type="text" name="disease">
+			</div>
+			<button type="submit" class="submit">Submit</button>
+		</form>
 	</div>
 	<script>
 		function RespMenu() {
