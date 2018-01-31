@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--for compatibility with explorer-->
     <meta name="viewport" content="width=device-width, initial-scale=1"> <!--responsive page-->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> <!--Bootstrap stylesheet-->
-
+	<script src="addField.js" language="Javascript" type="text/javascript"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
@@ -17,11 +17,15 @@
 				<label>Microindel Name</label><input placeholder="Microindel name" class="form-control" type="text" name="microindel_name" required>
 				<label>Microindel Information</label><input placeholder="Microindel extra information" class="form-control" type="text" name="microindel_info">
 			</div>
-			<div class="container" class="form-control" class="form">
-				<label>Gene</label><input placeholder="Gene name" class="form-control" type="text" name="gene">
-				<label>Gene Ensmbl ID</label><input placeholder="Ensmbl ID of the gene" class="form-control" type="text" name="EnsmblID">
+			<div class="container" class="form-control" class="form" id="dynamicGene">
+				<label>Gene</label><input placeholder="Gene name" class="form-control" type="text" name="gene[]">
 			</div>
-			<div class="container" class="form-control" class="form">				
+			<input type="button" value="Add gene" onClick="addFields('dynamicGene');">
+			<div class="container" class="form-control" class="form" id="dynamicEnsmbl">
+				<label>Gene Ensmbl ID</label><input placeholder="Ensmbl ID of the gene" class="form-control" type="text" name="EnsmblID[]">
+			</div>
+			<input type="button" value="Add Ensmbl ID" onClick="addFields('dynamicEnsmbl');">
+			<div class="container" class="form-control" class="form">		
 				<label>Start Positon</label><input placeholder="start position of the microindel" class="form-control" type="text" name="start">
 				<label>End Positon</label><input placeholder="end position of the microindel" class="form-control" type="text" name="end">
 				<label>Cytogenetic Location</label><input placeholder="cytogenetic location of the microindel" class="form-control" type="text" name="cytogen">
@@ -29,6 +33,7 @@
 			</div>
 			<div class="container" class="form-control" class="form">
 				<label>Clinical Significance</label><select class="form-control" name="clin_sig">
+					<option value="not_provided">Not provided</option>
 					<option value="benign">Benign</option>
 					<option value="likely_benign">Likely Benign</option>
 					<option value="association">Association</option>
@@ -39,18 +44,24 @@
 					<option value="likely_pathogenic">Likely Pathogenic</option>
 					<option value="pathogenic">Pathogenic</option>
 					<option value="uncertain">Uncertain Significance</option>
-					<option value="not_provided">Not provided</option>
 					<option value="other">Other</option>
 				</select>
 			</div>
-			<div class="container" class="form-control" class="form">	
-				<label>PMID</label><input placeholder="PubMed ID" class="form-control" type="text" name="PMID">
+			<div class="container" class="form-control" class="form" id="dynamicPMID">	
+				<label>PMID</label><input placeholder="PubMed ID" class="form-control" type="text" name="PMID[]">
 			</div>
-			<div class="container" class="form-control" class="form">
-				<label>Disease</label><input placeholder="Disease name related to the microindel" class="form-control" type="text" name="disease">
-				<label>IDMIM</label><input placeholder="OMIM ID of the disease" class="form-control" type="text" name="disease">
+			<input type="button" value="Add PubMed ID" onClick="addFields('dynamicPMID');">
+			<div class="container" class="form-control" class="form" id="dynamicDisease">
+				<label>Disease</label><input placeholder="Disease name related to the microindel" class="form-control" type="text" name="disease[]">
 			</div>
-			<button type="submit" class="submit">Submit</button>
+			<input type="button" value="Add Disease" onClick="addFields('dynamicDisease');">
+			<div class="container" class="form-control" class="form" id="dynamicIDMIM">
+				<label>IDMIM</label><input placeholder="OMIM ID of the disease" class="form-control" type="text" name="IDMIM[]">
+			</div>
+			<input type="button" value="Add OMIM ID" onClick="addFields('dynamicIDMIM');">
+			<div class="container">
+				<button type="submit" class="submit">Submit</button>
+			</div>
 		</form>
 	</div>
 	<script>

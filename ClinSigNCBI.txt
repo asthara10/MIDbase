@@ -1,12 +1,12 @@
 ID_ClinSig	Value
-1	
-2	
-3	
-4	
-5	
-6	
-7	
-8	
-9	
-10	
-11	
+1	Not provided
+2	Not provided
+3	Not provided
+4	Not provided
+5	Not provided
+6	Not provided
+7	Not provided
+8	Not provided
+9	Not provided
+10	Not provided
+11	Not provided
