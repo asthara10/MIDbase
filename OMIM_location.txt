@@ -1,0 +1,11 @@
+id_location 	 197042559 	 197299271 	 3q29 	 NULL 	 601014 	
+id_location 	 192600000 	 198295559 	 3q29 	 NULL 	 609425 	
+id_location 	 196739856 	 196832646 	 3q29 	 NULL 	 605022 	
+id_location 	 30900000 	 33400000 	 15q13.3 	 NULL 	 612001 	
+id_location 	 27400000 	 33500000 	 17q11.2 	 NULL 	 613675 	
+id_location 	 66200000 	 72900000 	 17q24.2-q24.3 	 NULL 	 135400 	
+id_location 	 8528873 	 8732186 	 Xp22.3 	 NULL 	 300836 	
+id_location 	 150361421 	 150514177 	 Xq28 	 NULL 	 300120 	
+id_location 	 192600000 	 198295559 	 3q29 	 NULL 	 611936 	
+id_location 	 17400000 	 25500000 	 22q11.2 	 NULL 	 608363 	
+id_location 	 50100000 	 54800000 	 Xp11.22 	 NULL 	 300705 	

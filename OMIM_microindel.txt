@@ -1,0 +1,11 @@
+601014 	 name 	 deleted in 3q29 microdeletion syndrome 	
+609425 	 name 	 contiguous gene deletion syndrome 	
+605022 	 name 	 deleted in 3q29 microdeletion syndrome 	
+612001 	 name 	  	
+613675 	 name 	  	
+135400 	 name 	  	
+300836 	 name 	 with ichthyosis in probable microdeletion syndrome 	
+300120 	 name 	 near MTM1 in microdeletion 	
+611936 	 name 	 contiguous gene duplication syndrome 	
+608363 	 name 	 contiguous gene microduplication syndrome 	
+300705 	 name 	 minimal duplicated region 228 kb overlapping HUWE1 and HSD17B10 	
