@@ -1,14 +1,14 @@
 ID_Gene	GeneName	ID_Location	ID_Ensmbl
-1		1	
-2	MRX17	2	
-3	MRX31	2	
-4		3	
-5	XLAG	4	
-6	EIG7	5	
-7	SCZD13	5	
-8		6	
-9		7	
-10		8	
-11		9	
-12		10	
-13		11	
+1	Not provided	1	Not provided
+2	MRX17	2	Not provided
+3	MRX31	2	Not provided
+4	Not provided	3	Not provided
+5	XLAG	4	Not provided
+6	EIG7	5	Not provided
+7	SCZD13	5	Not provided
+8	Not provided	6	Not provided
+9	Not provided	7	Not provided
+10	Not provided	8	Not provided
+11	Not provided	9	Not provided
+12	Not provided	10	Not provided
+13	Not provided	11	Not provided
