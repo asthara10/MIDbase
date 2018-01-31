@@ -4,12 +4,39 @@
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--for compatibility with explorer-->
     <meta name="viewport" content="width=device-width, initial-scale=1"> <!--responsive page-->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> <!--Bootstrap stylesheet-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="custom.css">
 	<script src="addField.js" language="Javascript" type="text/javascript"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="#"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="##navbarToggleExternalContent" aria-controls="#navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-item nav-link" href="MIOD.html">Home</a>
+              <a class="nav-item nav-link" href="search.html">Advanced Search</a>
+              <a class="nav-item nav-link active" href="MIODform.html">Introduce Data<span class="sr-only">(current)</span></a>
+              <a class="nav-item nav-link" href="Contact.html">Contact Us</a>
+              <a class="nav-item nav-link" href="about.html">About Us</a>
+              <a class="nav-item nav-link" href="MIOD.html">MIOD</a>
+            </div>
+          </div>
+            <form action="login.html">
+             <input type="button" value="LogIn">
+             </form>
+             <form action="signup.html">
+              <input type="button" value="SignUp">
+            </form>
+            <form class="form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+      </nav>
 	<div class="container">
 		<p id="com_text">Fill in the form below:</p>
 		<form method="post" action="submit_data.php" name="input">
@@ -60,7 +87,7 @@
 			</div>
 			<input type="button" value="Add OMIM ID" onClick="addFields('dynamicIDMIM');">
 			<div class="container">
-				<button type="submit" class="submit">Submit</button><!-- mateixa class que sing in i sign up-->
+				<button type="submit" class="button2">Submit</button><!-- mateixa class que sing in i sign up-->
 			</div>
 		</form>
 	</div>
