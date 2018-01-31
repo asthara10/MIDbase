@@ -49,18 +49,29 @@ for line in dades:
 	#Clinsig.txt	
 	if lines[12] not in clinsig.keys():
 		IDclinsig += 1
-		clinsig[lines[12]] = (IDclinsig, lines[12])
+		if lines[12] == "":
+			clin = "Not provided"
+		else:
+			clin = lines[12]
+		clinsig[lines[12]] = (IDclinsig, clin)
 
 	#Disease.txt
 	if lines[14] not in disease.keys():
 		iddisease += 1
-		disease[lines[14]] = (iddisease, lines[14])
+		if lines[14] == "\n":
+			dis = "Not provided"
+		else:
+			dis = lines[14]
+		disease[lines[14]] = (iddisease, dis)
 
 	#Reference.txt 
 	if lines[13] not in reference.keys():
 		idref += 1
 		db = lines[6]
-		codi = lines[13]
+		if lines[13] == "":
+			codi = "Not provided"
+		else:
+			codi = lines[13]
 		reference[lines[13]] =  (idref, codi, db)
 	
 	#Gene.txt
@@ -71,7 +82,6 @@ for line in dades:
 	#MicroindelHasSign.txt
 	if ((microid,IDclinsig)) not in microsign:
 		microsign.append((microin[lines[0]][0],clinsig[lines[12]][0]))
-		print(lines[0],lines[12])
 
 	#MicroindelDisease.txt
 	if ((microid, iddisease)) not in microdis:
