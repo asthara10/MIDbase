@@ -10,6 +10,4 @@ ID_Disease	DiseaseName	ID_MIM
 9	DDCH	300475
 10		609425
 11	Koolen-de_Vries_syndrome(KDVS)	610443
-12		
-13		
 14	neurofibromatosis1(NF1)	613675
