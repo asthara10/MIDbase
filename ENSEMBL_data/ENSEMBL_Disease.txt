@@ -1,0 +1,5 @@
+
+
+ID_Disease	DiseaseName	ID_MIM
+1	
+2	ZELLWEGER SYNDROME

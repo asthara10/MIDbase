@@ -1,0 +1,11 @@
+gene.txt: IDGene | Gene name (descarregar) | IDlocation | IDENsembl
+location.txt: IDLocation | Start | End | CytogenicLoc(absents) | Strand (presents?) | IDMicroindel
+microindel.txt: IDmicroindel | Name | Info (el que vulguis: alels?)
+microindelhassign.txt: IDmicroindel | IDclinSig
+Clinsig.txt: IDclinsig | Value
+MicroIndelRef.txt: IDMicroindel | IDRef
+References.txt: IDRef | Reference (author, articel, PubmedID)  | Database
+MicroindelDisease.txt: IDMicroindel | IDDisease
+Disease.txt: IDdisease | DiseaseName (cal descarregar) | IDMIM (no ho tinc)
+
+http://www.ensembl.org/biomart/martview/99b713f76a63c519c6d9b2531dad83d4?VIRTUALSCHEMANAME=default&ATTRIBUTES=hsapiens_snp.default.snp.refsnp_id|hsapiens_snp.default.snp.authors|hsapiens_snp.default.snp.title|hsapiens_snp.default.snp.phenotype_name|hsapiens_snp.default.snp.associated_gene|hsapiens_snp.default.snp.ensembl_gene_stable_id|hsapiens_snp.default.snp.refsnp_source|hsapiens_snp.default.snp.chr_name|hsapiens_snp.default.snp.chrom_start|hsapiens_snp.default.snp.chrom_end|hsapiens_snp.default.snp.allele|hsapiens_snp.default.snp.chrom_strand|hsapiens_snp.default.snp.clinical_significance|hsapiens_snp.default.snp.pmid|hsapiens_snp.default.snp.phenotype_description&FILTERS=&VISIBLEPANEL=resultspanel
