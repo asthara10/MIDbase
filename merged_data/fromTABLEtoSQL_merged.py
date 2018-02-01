@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 import re
 
 def read_tabular(txt_name):
@@ -48,7 +50,7 @@ def insert_data(table_names, file_names):
 
 #Lists of talbe names and file names to run the function
 table_names = ["Microindel", "Location", "Gene", "ClinicalSignificance", "Disease", "References", "Microindel_has_References", "Microindel_has_ClinicalSignificance", "Microindel_has_Disease"]
-file_names = ["MicroindelNCBI.txt", "LocationNCBI.txt", "GeneNCBI.txt", "ClinSigNCBI.txt", "DiseaseNCBI.txt", "ReferencesNCBI.txt", "MicroIndelRefNCBI.txt", "MicroindelHasSignNCBI.txt", "MicroindelDiseaseNCBI.txt"]
+file_names = ["merged_Microindel.txt", "merged_Location.txt", "merged_Gene.txt", "merged_ClinSig.txt", "merged_Disease.txt", "merged_References.txt", "merged_MicroIndelRef.txt", "merged_MicroindelHasSign.txt", "merged_MicroindelDisease.txt"]
 
 #calling the function
 #when executed in the terminal, save the output to a name.sql file. Ex: python3 fromTABLEtoSQL.py > InsertData.sql
