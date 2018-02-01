@@ -12,9 +12,10 @@ def read_tabular(txt_name):
 			line = line.rstrip('\n')
 			values = re.split(r'\t', line)
 			j = 0
+			comi = '"'
 			for value in values:
 				if isinstance(value, str):
-					values[j] = '"'+value+'"'
+					values[j] = '"' + value+'"'
 				j += 1
 			to_insert = []
 			i = 0
