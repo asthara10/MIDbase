@@ -3,7 +3,7 @@
 // Connecting to the server
 $servername = "localhost"; //which is the servername??
 $username = "username"; //use our username and password? 
-$password = "password";
+$password = "password"; //use our username and password? 
 // Create connection
 $conn = mysqli_connect($servername, $username, $password);
 // Check connection
