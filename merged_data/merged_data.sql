@@ -1267,7 +1267,27 @@ VALUES ("204", "Not provided", "Not provided", "221");
 INSERT INTO ClinicalSignificance (idClinicalSignificance, Value)
 VALUES ("1", "Not provided");
 INSERT INTO ClinicalSignificance (idClinicalSignificance, Value)
-VALUES ("2", "benign");
+VALUES ("2", "Benign");
+INSERT INTO ClinicalSignificance (idClinicalSignificance, Value)
+VALUES ("3", "Likely Benign");
+INSERT INTO ClinicalSignificance (idClinicalSignificance, Value)
+VALUES ("4", "Association");
+INSERT INTO ClinicalSignificance (idClinicalSignificance, Value)
+VALUES ("5", "Confers Sensitivity");
+INSERT INTO ClinicalSignificance (idClinicalSignificance, Value)
+VALUES ("6", "Drug Response");
+INSERT INTO ClinicalSignificance (idClinicalSignificance, Value)
+VALUES ("7", "Protective");
+INSERT INTO ClinicalSignificance (idClinicalSignificance, Value)
+VALUES ("8", "Risk Factor");
+INSERT INTO ClinicalSignificance (idClinicalSignificance, Value)
+VALUES ("9", "Likely Pathogenic");
+INSERT INTO ClinicalSignificance (idClinicalSignificance, Value)
+VALUES ("10", "Pathogenic");
+INSERT INTO ClinicalSignificance (idClinicalSignificance, Value)
+VALUES ("11", "Uncertain Significance");
+INSERT INTO ClinicalSignificance (idClinicalSignificance, Value)
+VALUES ("12", "Other");
 INSERT INTO Disease (idDisease, DiseaseName, idMIM)
 VALUES ("1", "Not provided", "Not provided");
 INSERT INTO Disease (idDisease, DiseaseName, idMIM)
@@ -1283,646 +1303,468 @@ VALUES ("6", "", "300942");
 INSERT INTO Disease (idDisease, DiseaseName, idMIM)
 VALUES ("7", "", "612001");
 INSERT INTO Disease (idDisease, DiseaseName, idMIM)
-VALUES ("8", "Deafness", "300475");
+VALUES ("8", "DDHC", "300475");
 INSERT INTO Disease (idDisease, DiseaseName, idMIM)
-VALUES ("9", "Dystonia", "300475");
+VALUES ("9", "", "609425");
 INSERT INTO Disease (idDisease, DiseaseName, idMIM)
-VALUES ("10", "cerebral_hypomethylation", "300475");
+VALUES ("10", "Koolen-de_Vries_syndrome(KDVS)", "610443");
 INSERT INTO Disease (idDisease, DiseaseName, idMIM)
-VALUES ("11", "DDCH", "300475");
-INSERT INTO Disease (idDisease, DiseaseName, idMIM)
-VALUES ("12", "", "609425");
-INSERT INTO Disease (idDisease, DiseaseName, idMIM)
-VALUES ("13", "Koolen-de_Vries_syndrome(KDVS)", "610443");
-INSERT INTO Disease (idDisease, DiseaseName, idMIM)
-VALUES ("16", "neurofibromatosis1(NF1)", "613675");
-INSERT INTO References (idReferences, PMID, Database)
+VALUES ("11", "neurofibromatosis1(NF1)", "613675");
+INSERT INTO Reference (idReference, PMID, DB)
 VALUES ("1", "Not provided", "dbSNP");
-INSERT INTO References (idReferences, PMID, Database)
+INSERT INTO Reference (idReference, PMID, DB)
 VALUES ("2", "26837816", "dbSNP");
-INSERT INTO References (idReferences, PMID, Database)
+INSERT INTO Reference (idReference, PMID, DB)
 VALUES ("3", "21285523", "dbSNP");
-INSERT INTO References (idReferences, PMID, Database)
+INSERT INTO Reference (idReference, PMID, DB)
 VALUES ("4", "22272242", "dbSNP");
-INSERT INTO References (idReferences, PMID, Database)
+INSERT INTO Reference (idReference, PMID, DB)
 VALUES ("5", "16039051", "dbSNP");
-INSERT INTO References (idReferences, PMID, Database)
+INSERT INTO Reference (idReference, PMID, DB)
 VALUES ("6", "17997390", "dbSNP");
-INSERT INTO References (idReferences, PMID, Database)
+INSERT INTO Reference (idReference, PMID, DB)
 VALUES ("7", "21359226", "dbSNP");
-INSERT INTO References (idReferences, PMID, Database)
+INSERT INTO Reference (idReference, PMID, DB)
 VALUES ("8", "22124616", "dbSNP");
-INSERT INTO References (idReferences, PMID, Database)
+INSERT INTO Reference (idReference, PMID, DB)
 VALUES ("9", "23690203", "dbSNP");
-INSERT INTO References (idReferences, PMID, Database)
+INSERT INTO Reference (idReference, PMID, DB)
 VALUES ("10", "24416183", "dbSNP");
-INSERT INTO References (idReferences, PMID, Database)
+INSERT INTO Reference (idReference, PMID, DB)
 VALUES ("11", "19515250", "dbSNP");
-INSERT INTO References (idReferences, PMID, Database)
+INSERT INTO Reference (idReference, PMID, DB)
 VALUES ("12", "22876571", "NCBI");
-INSERT INTO References (idReferences, PMID, Database)
+INSERT INTO Reference (idReference, PMID, DB)
 VALUES ("13", "23521024", "NCBI");
-INSERT INTO References (idReferences, PMID, Database)
+INSERT INTO Reference (idReference, PMID, DB)
 VALUES ("14", "25470569", "NCBI");
-INSERT INTO References (idReferences, PMID, Database)
+INSERT INTO Reference (idReference, PMID, DB)
 VALUES ("15", "24246141", "NCBI");
-INSERT INTO References (idReferences, PMID, Database)
+INSERT INTO Reference (idReference, PMID, DB)
 VALUES ("16", "25326701", "NCBI");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("1", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("2", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("3", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("4", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("5", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("6", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("7", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("8", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("9", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("10", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("11", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("12", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("13", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("14", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("15", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("16", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("17", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("18", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("19", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("20", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("21", "2");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("22", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("23", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("24", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("25", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("25", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("26", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("27", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("28", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("29", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("30", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("31", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("31", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("32", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("32", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("33", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("34", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("34", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("35", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("36", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("36", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("36", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("37", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("38", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("39", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("39", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("40", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("40", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("41", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("42", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("43", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("44", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("44", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("44", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("45", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("45", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("46", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("47", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("47", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("47", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("48", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("49", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("50", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("51", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("51", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("52", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("53", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("54", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("54", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("55", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("56", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("57", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("58", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("58", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("59", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("60", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("61", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("61", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("62", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("62", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("63", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("64", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("65", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("66", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("67", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("68", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("68", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("68", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("69", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("70", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("71", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("72", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("72", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("73", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("74", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("75", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("75", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("75", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("75", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("76", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("77", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("77", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("78", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("79", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("80", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("80", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("81", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("82", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("83", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("84", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("85", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("86", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("86", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("86", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("87", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("87", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("88", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("89", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("90", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("90", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("91", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("91", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("92", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("93", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("94", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("95", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("96", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("97", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("98", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("99", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("100", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("100", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("101", "3");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("102", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("103", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("104", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("104", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("105", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("105", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("106", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("106", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("107", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("108", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("109", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("110", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("110", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("111", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("112", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("112", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("113", "4");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("114", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("115", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("116", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("116", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("116", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("117", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("118", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("119", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("120", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("120", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("121", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("121", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("122", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("123", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("124", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("124", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("125", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("126", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("126", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("127", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("128", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("129", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("130", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("131", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("132", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("133", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("134", "4");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("135", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("136", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("136", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("137", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("137", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("138", "5");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("139", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("140", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("140", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("141", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("142", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("143", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("144", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("144", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("145", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("146", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("146", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("147", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("148", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("149", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("149", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("149", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("149", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("150", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("150", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("151", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("152", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("153", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("154", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("155", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("155", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("156", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("156", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("157", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("158", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("159", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("160", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("161", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("161", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("162", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("163", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("163", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("163", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("164", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("164", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("164", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("165", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("165", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("165", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("165", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("165", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("165", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("165", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("165", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("165", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("165", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("165", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("165", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("165", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("165", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("165", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("165", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("165", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("165", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("165", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("165", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("166", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("166", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("167", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("167", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("167", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("168", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("169", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("170", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("171", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("172", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("173", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("174", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("175", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("176", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("177", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("178", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("179", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("180", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("180", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("181", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("181", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("182", "6");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("183", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("184", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("185", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("186", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("187", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("188", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("188", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("189", "10");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("189", "7");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("189", "8");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("189", "9");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("190", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("190", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("191", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("192", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("193", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("194", "9");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("195", "11");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("196", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
-VALUES ("196", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("197", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("198", "13");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("198", "12");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("199", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("200", "14");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("201", "14");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("202", "15");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("203", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("204", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("205", "1");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("206", "16");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("207", "16");
-INSERT INTO Microindel_has_References (Microindel_idMicroindel, References_idReferences)
+INSERT INTO Microindel_has_Reference (Microindel_idMicroindel, Reference_idReference)
 VALUES ("208", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("1", "1");
@@ -1963,14 +1805,6 @@ VALUES ("18", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("19", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("19", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("19", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("20", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("20", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("20", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("21", "1");
@@ -1980,8 +1814,6 @@ INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, Clinic
 VALUES ("23", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("24", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("25", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("25", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
@@ -1997,23 +1829,13 @@ VALUES ("30", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("31", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("31", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("32", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("32", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("33", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("34", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("34", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("35", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("36", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("36", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("36", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
@@ -2022,10 +1844,6 @@ INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, Clinic
 VALUES ("38", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("39", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("39", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("40", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("40", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
@@ -2037,19 +1855,9 @@ VALUES ("43", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("44", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("44", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("44", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("45", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("45", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("46", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("47", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("47", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("47", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
@@ -2061,13 +1869,9 @@ VALUES ("50", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("51", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("51", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("52", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("53", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("54", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("54", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
@@ -2079,17 +1883,11 @@ VALUES ("57", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("58", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("58", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("59", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("60", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("61", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("61", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("62", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("62", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
@@ -2105,17 +1903,11 @@ VALUES ("67", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("68", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("68", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("68", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("69", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("70", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("71", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("72", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("72", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
@@ -2125,23 +1917,13 @@ VALUES ("74", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("75", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("75", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("75", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("75", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("76", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("77", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("77", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("78", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("79", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("80", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("80", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
@@ -2157,12 +1939,6 @@ VALUES ("85", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("86", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("86", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("86", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("87", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("87", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("88", "1");
@@ -2170,10 +1946,6 @@ INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, Clinic
 VALUES ("89", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("90", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("90", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("91", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("91", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
@@ -2195,10 +1967,6 @@ VALUES ("99", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("100", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("100", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("101", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("101", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("102", "1");
@@ -2207,13 +1975,7 @@ VALUES ("103", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("104", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("104", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("105", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("105", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("106", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("106", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
@@ -2225,11 +1987,7 @@ VALUES ("109", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("110", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("110", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("111", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("112", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("112", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
@@ -2241,10 +1999,6 @@ VALUES ("115", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("116", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("116", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("116", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("117", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("118", "1");
@@ -2252,10 +2006,6 @@ INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, Clinic
 VALUES ("119", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("120", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("120", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("121", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("121", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
@@ -2265,11 +2015,7 @@ VALUES ("123", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("124", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("124", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("125", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("126", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("126", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
@@ -2293,19 +2039,11 @@ VALUES ("135", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("136", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("136", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("137", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("137", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("138", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("138", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("139", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("140", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("140", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
@@ -2317,11 +2055,7 @@ VALUES ("143", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("144", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("144", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("145", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("146", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("146", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
@@ -2330,14 +2064,6 @@ INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, Clinic
 VALUES ("148", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("149", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("149", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("149", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("149", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("150", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("150", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
@@ -2351,10 +2077,6 @@ VALUES ("154", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("155", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("155", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("156", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("156", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("157", "1");
@@ -2367,69 +2089,15 @@ VALUES ("160", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("161", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("161", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("162", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("163", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("163", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("163", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("164", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("164", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("164", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("165", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("165", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("165", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("165", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("165", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("165", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("165", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("165", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("165", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("165", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("165", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("165", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("165", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("165", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("165", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("165", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("165", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("165", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("165", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("165", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("166", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("166", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("167", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("167", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("167", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
@@ -2459,10 +2127,6 @@ VALUES ("179", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("180", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("180", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("181", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("181", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("182", "1");
@@ -2479,17 +2143,7 @@ VALUES ("187", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("188", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("188", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("189", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("189", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("189", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("189", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("190", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("190", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
@@ -2502,8 +2156,6 @@ INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, Clinic
 VALUES ("194", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("195", "1");
-INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
-VALUES ("196", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
 VALUES ("196", "1");
 INSERT INTO Microindel_has_ClinicalSignificance (Microindel_idMicroindel, ClinicalSignificance_idClinicalSignificance)
@@ -2569,14 +2221,6 @@ VALUES ("18", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("19", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("19", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("19", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("20", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("20", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("20", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("21", "1");
@@ -2586,8 +2230,6 @@ INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("23", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("24", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("25", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("25", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
@@ -2603,23 +2245,13 @@ VALUES ("30", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("31", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("31", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("32", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("32", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("33", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("34", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("34", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("35", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("36", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("36", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("36", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
@@ -2628,10 +2260,6 @@ INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("38", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("39", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("39", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("40", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("40", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
@@ -2643,19 +2271,9 @@ VALUES ("43", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("44", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("44", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("44", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("45", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("45", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("46", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("47", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("47", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("47", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
@@ -2667,13 +2285,9 @@ VALUES ("50", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("51", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("51", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("52", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("53", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("54", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("54", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
@@ -2685,17 +2299,11 @@ VALUES ("57", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("58", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("58", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("59", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("60", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("61", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("61", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("62", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("62", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
@@ -2711,17 +2319,11 @@ VALUES ("67", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("68", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("68", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("68", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("69", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("70", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("71", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("72", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("72", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
@@ -2731,23 +2333,13 @@ VALUES ("74", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("75", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("75", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("75", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("75", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("76", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("77", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("77", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("78", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("79", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("80", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("80", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
@@ -2763,12 +2355,6 @@ VALUES ("85", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("86", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("86", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("86", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("87", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("87", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("88", "1");
@@ -2776,10 +2362,6 @@ INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("89", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("90", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("90", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("91", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("91", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
@@ -2801,10 +2383,6 @@ VALUES ("99", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("100", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("100", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("101", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("101", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("102", "1");
@@ -2813,13 +2391,7 @@ VALUES ("103", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("104", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("104", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("105", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("105", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("106", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("106", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
@@ -2831,11 +2403,7 @@ VALUES ("109", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("110", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("110", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("111", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("112", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("112", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
@@ -2847,10 +2415,6 @@ VALUES ("115", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("116", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("116", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("116", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("117", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("118", "1");
@@ -2858,10 +2422,6 @@ INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("119", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("120", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("120", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("121", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("121", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
@@ -2871,11 +2431,7 @@ VALUES ("123", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("124", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("124", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("125", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("126", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("126", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
@@ -2899,19 +2455,11 @@ VALUES ("135", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("136", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("136", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("137", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("137", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("138", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("138", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("139", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("140", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("140", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
@@ -2923,11 +2471,7 @@ VALUES ("143", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("144", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("144", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("145", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("146", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("146", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
@@ -2936,14 +2480,6 @@ INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("148", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("149", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("149", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("149", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("149", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("150", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("150", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
@@ -2957,10 +2493,6 @@ VALUES ("154", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("155", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("155", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("156", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("156", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("157", "1");
@@ -2973,69 +2505,15 @@ VALUES ("160", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("161", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("161", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("162", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("163", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("163", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("163", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("164", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("164", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("164", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("165", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("165", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("165", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("165", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("165", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("165", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("165", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("165", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("165", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("165", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("165", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("165", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("165", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("165", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("165", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("165", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("165", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("165", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("165", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("165", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("166", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("166", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("167", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("167", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("167", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
@@ -3065,10 +2543,6 @@ VALUES ("179", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("180", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("180", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("181", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("181", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("182", "1");
@@ -3085,17 +2559,7 @@ VALUES ("187", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("188", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("188", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("189", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("189", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("189", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("189", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("190", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("190", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
@@ -3108,8 +2572,6 @@ INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("194", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("195", "1");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("196", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("196", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
@@ -3127,18 +2589,12 @@ VALUES ("202", "7");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("203", "8");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("203", "9");
+VALUES ("204", "9");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("203", "10");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("203", "11");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("204", "12");
-INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("205", "13");
+VALUES ("205", "10");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("206", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
 VALUES ("207", "1");
 INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease)
-VALUES ("208", "14");
+VALUES ("208", "11");

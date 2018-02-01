@@ -55,7 +55,7 @@ def insert_data(table_names, file_names):
 		i += 1
 
 #Lists of talbe names and file names to run the function
-table_names = ["Microindel", "Location", "Gene", "ClinicalSignificance", "Disease", "References", "Microindel_has_References", "Microindel_has_ClinicalSignificance", "Microindel_has_Disease"]
+table_names = ["Microindel", "Location", "Gene", "ClinicalSignificance", "Disease", "Reference", "Microindel_has_Reference", "Microindel_has_ClinicalSignificance", "Microindel_has_Disease"]
 file_names = ["merged_Microindel.txt", "merged_Location.txt", "merged_Gene.txt", "merged_ClinSig.txt", "merged_Disease.txt", "merged_Reference.txt", "merged_MicroIndelRef.txt", "merged_MicroindelHasSign.txt", "merged_MicroindelDisease.txt"]
 
 #calling the function
