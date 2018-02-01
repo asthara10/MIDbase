@@ -1,4 +1,4 @@
-ID_Microindel	ID_ClinSig
+Microindel_idMicroindel	ClinicalSignificance_idClinicalSignificance
 1	1
 2	1
 3	1

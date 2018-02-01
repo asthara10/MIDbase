@@ -1,4 +1,4 @@
-ID_Location	Start End	CytonLoc	Strand	ID_Microindel
+idLocation	StartGRCh38 EndGRCh38	CythogeneticLocation	Strand	Microindel_idMicroindel
 1	44816166	44816165	22	1	1
 2	27989229	27989228	22	1	2
 3	33694405	33694404	6	1	3

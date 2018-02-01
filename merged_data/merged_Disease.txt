@@ -1,6 +1,6 @@
-ID_Disease	DiseaseName	ID_MIM
-1	Not provided
-2	ZELLWEGER SYNDROME
+idDisease	DiseaseName	idMIM
+1	Not provided	Not provided
+2	ZELLWEGER SYNDROME	Not provided
 3	608363	
 4		300705
 5		611936

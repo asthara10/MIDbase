@@ -1,4 +1,4 @@
-ID_Ref	PMID	Database
+idReferences	PMID	Database
 1	Not provided	dbSNP
 2	26837816	dbSNP
 3	21285523	dbSNP

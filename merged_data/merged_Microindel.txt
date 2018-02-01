@@ -1,4 +1,4 @@
-ID_Microindel	Name	Info
+idMicroindel	Name	Info
 1	rs470063	-/AT
 2	rs470099	-/CA
 3	rs866898	-/C/CC

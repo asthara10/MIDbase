@@ -11,6 +11,11 @@ def read_tabular(txt_name):
 		for line in file:
 			line = line.rstrip('\n')
 			values = re.split(r'\t', line)
+			j = 0
+			for value in values:
+				if isinstance(value, str):
+					values[j] = '"'+value+'"'
+				j += 1
 			to_insert = []
 			i = 0
 			for name in headers:
@@ -50,7 +55,7 @@ def insert_data(table_names, file_names):
 
 #Lists of talbe names and file names to run the function
 table_names = ["Microindel", "Location", "Gene", "ClinicalSignificance", "Disease", "References", "Microindel_has_References", "Microindel_has_ClinicalSignificance", "Microindel_has_Disease"]
-file_names = ["merged_Microindel.txt", "merged_Location.txt", "merged_Gene.txt", "merged_ClinSig.txt", "merged_Disease.txt", "merged_References.txt", "merged_MicroIndelRef.txt", "merged_MicroindelHasSign.txt", "merged_MicroindelDisease.txt"]
+file_names = ["merged_Microindel.txt", "merged_Location.txt", "merged_Gene.txt", "merged_ClinSig.txt", "merged_Disease.txt", "merged_Reference.txt", "merged_MicroIndelRef.txt", "merged_MicroindelHasSign.txt", "merged_MicroindelDisease.txt"]
 
 #calling the function
 #when executed in the terminal, save the output to a name.sql file. Ex: python3 fromTABLEtoSQL.py > InsertData.sql
