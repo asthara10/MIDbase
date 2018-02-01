@@ -6,10 +6,7 @@ idDisease	DiseaseName	idMIM
 5		611936
 6		300942
 7		612001
-8	Deafness	300475
-9	Dystonia	300475
-10	cerebral_hypomethylation	300475
-11	DDCH	300475
-12		609425
-13	Koolen-de_Vries_syndrome(KDVS)	610443
-16	neurofibromatosis1(NF1)	613675
+8	DDHC	300475
+9		609425
+10	Koolen-de_Vries_syndrome(KDVS)	610443
+11	neurofibromatosis1(NF1)	613675
