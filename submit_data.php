@@ -53,62 +53,60 @@ $location_names = ["Start", "End", "Strand", "CytonLoc"];
 $gene_names = ["GeneName", "EnsmblID"];
 $disease_names = ["DiseaseName", "idMIM"];
 $diseases = ["DiseaseName", "idMIM"];
-
 // Inserting data
-$actual_microindel_names = $microindel_names;
-if empty($microindel_info) {
-	$actual_microindel_names = array_diff($actual_microindel_names, ["Info"]);
+$sql = "INSERT INTO Microindel (Name)
+VALUES ($microindel_name);";
+if !empty($microindel_info) {
+	$sql .= "INSERT INTO Microindel (Info)
+	VALUES ($microindel_info);";
 } 
-$sql = "INSERT INTO Microindel ($actual_microindel_names)
-VALUES ($microindel_name, $microindel_info);";
-if !empty($genes) || !empty($EnsmblIDs) {
-	$actual_gene_names = $gene_names;
-	if empty($genes) {
-		$actual_gene_names = array_diff($actual_gene_names, ["GeneName"]);
-	}
-	if empty($EnsmblIDs) {
-		$actual_gene_names = array_diff($actual_gene_names, ["EnsmblID"]);
-	}
-	$sql = "INSERT INTO Gene ($actual_gene_names)
-	VALUES ($genes, $EnsmblIDs);";
+if !empty($genes) {
+	$sql .= "INSERT INTO Gene (GeneName)
+	VALUES ($each_gene);";
 }
-if !empty($start) || !empty($end) || !empty($cytogen) || !empty($strand) {
-	$actual_location_names = $location_names;
-	if empty($start) {
-		$actual_location_names = array_diff($actual_location_names, ["Start"]);
-	}
-	if empty($end) {
-		$actual_location_names = array_diff($actual_location_names, ["End"]);
-	}
-	if empty($cytogen) {
-		$actual_location_names = array_diff($actual_location_names, ["Strand"]);
-	}
-	if empty($strand) {
-		$actual_location_names = array_diff($actual_location_names, ["CytonLoc"]);
-	}
+if !empty($EnsmblIDs) {
+	$sql .= "INSERT INTO Gene (EnsmblID)
+	VALUES ($each_EnsmblID);";
 }
+if !empty($start) {
+	$sql .= "INSERT INTO Location (Start)
+	VALUES ($start);";
+}
+if !empty($end) {
+	$sql .= "INSERT INTO Location (End)
+	VALUES ($end);";
+}
+if !empty($cytogen) {
+	$sql .= "INSERT INTO Location (CytonLoc)
+	VALUES ($cytogen);";
+}
+if !empty($strand) {
+	$sql .= "INSERT INTO Location (Strand)
+	VALUES ($strand);";
+}
+
 if !empty($clin_sig){
- $Value
+	$sql .= "INSERT INTO ClinicalSignificance (Value)
+	VALUES ($clin_sig);";
+$Value
 }
 if !empty($PMIDs) {
- $PMID
-}
-if !empty($IDMIM)	|| !empty($diseases) {
-	$actual_disease_names = $disease_names;
-	if empty($IDMIM) {
-		$actual_disease_names = array_diff($actual_disease_names, ["idMIM"]);
-	}
-	if empty($diseases) {
-		$actual_disease_names = array_diff($actual_disease_names, ["DiseaseName"]);
-	}
+	$sql .= "INSERT INTO References (Reference)
+	VALUES ($PMIDs);";
+$PMID
 }
 
-$sql = "INSERT INTO MyGuests (firstname, lastname, email)
-VALUES ('John', 'Doe', 'john@example.com');";
-$sql .= "INSERT INTO MyGuests (firstname, lastname, email)
-VALUES ('Mary', 'Moe', 'mary@example.com');";
-$sql .= "INSERT INTO MyGuests (firstname, lastname, email)
-VALUES ('Julie', 'Dooley', 'julie@example.com')";
+if !empty($IDMIM) {
+	$sql .= "INSERT INTO Disease (idMIM)
+	VALUES ($IDMIM);";
+}
+if !empty($diseases) {
+	$sql .= "INSERT INTO Disease (DiseaseName)
+	VALUES ($microindel_info);";
+}
+
+
+
 
 if (mysqli_multi_query($conn, $sql)) {
     echo "New records created successfully";
