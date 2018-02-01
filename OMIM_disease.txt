@@ -1,0 +1,11 @@
+id_disease 	  	 601014 	
+id_disease 	 Chromosome 3q29 microdeletion syndrome, 609425 (4), Isolated cases 	 609425 	
+id_disease 	  	 605022 	
+id_disease 	 Chromosome 15q13.3 microdeletion syndrome, 612001 (4) 	 612001 	
+id_disease 	 Chromosome 17q11.2 deletion syndrome, 1.4Mb, 613675 (4), Autosomal dominant 	 613675 	
+id_disease 	  	 135400 	
+id_disease 	 Hypogonadotropic hypogonadism 1 with or without anosmia (Kallmann syndrome 1), 308700 (3), X-linked recessive 	 300836 	
+id_disease 	 Hypospadias 2, X-linked, 300758 (3), X-linked recessive 	 300120 	
+id_disease 	 Chromosome 3q29 microduplication syndrome, 611936 (4), Autosomal dominant 	 611936 	
+id_disease 	 Chromosome 22q11.2 microduplication syndrome, 608363 (4), Autosomal dominant, Isolated cases 	 608363 	
+id_disease 	 Xp11.22 microduplication syndrome, 300705 (4) 	 300705 	
