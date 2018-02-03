@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> <!--helena pots afegit classes als div i al label i als button per fer els css però no modificar res-->
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--for compatibility with explorer-->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!--responsive page-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="custom.css">
+	<script src="addField.js" language="Javascript" type="text/javascript"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="#"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="##navbarToggleExternalContent" aria-controls="#navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-item nav-link" href="MIOD.html">Home</a>
+              <a class="nav-item nav-link" href="search.html">Advanced Search</a>
+              <a class="nav-item nav-link active" href="MIODform.html">Introduce Data<span class="sr-only">(current)</span></a>
+              <a class="nav-item nav-link" href="Contact.html">Contact Us</a>
+              <a class="nav-item nav-link" href="about.html">About Us</a>
+            </div>
+           <form class="form-inline">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+            <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="button">Login</button>
+            <div id="id01" class="modal">
+                <form class="modal-content animate" action="/login.php">
+                  <div class="container">
+                   <form>
+                      User name:<br>
+                      <input type="text" name="username"><br>
+                      User password:<br>
+                      <input type="password" name="psw" size = "15"><br>
+                    </form>  
+                    <button type="submit" class="button3">Login</button>
+                    <label>
+                    <input type="checkbox" checked="checked"> Remember me</label>
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                    <span class="psw"><a href="#"> Forgot password?</a></span>
+                  </div>
+                </form>
+              </div>
+             <form action="signup.html">
+              <input type="button" value="SignUp" class="button">
+            </form>
+      </nav>
+	<div class="container">
+		<p id="com_text">Fill in the form below:</p>
+		<form method="post" action="submit_data.php" name="input">
+			<div class="container" class="form-control" class="form">
+				<label>Microindel Name</label><input placeholder="Microindel name" class="form-control" type="text" name="microindel_name" required>
+				<label>Microindel Information</label><input placeholder="Microindel extra information" class="form-control" type="text" name="microindel_info">
+			</div>
+			<div class="container" class="form-control" class="form" id="dynamicGene">
+				<label>Gene</label><input placeholder="Gene name" class="form-control" type="text" name="gene[]">
+			</div>
+			<input type="button" value="Add gene" onClick="addFields('dynamicGene');">
+			<div class="container" class="form-control" class="form" id="dynamicEnsmbl">
+				<label>Gene Ensmbl ID</label><input placeholder="Ensmbl ID of the gene" class="form-control" type="text" name="EnsmblID[]">
+			</div>
+			<input type="button" value="Add Ensmbl ID" onClick="addFields('dynamicEnsmbl');">
+			<div class="container" class="form-control" class="form">		
+				<label>Start Positon</label><input placeholder="start position of the microindel" class="form-control" type="text" name="start">
+				<label>End Positon</label><input placeholder="end position of the microindel" class="form-control" type="text" name="end">
+				<label>Cytogenetic Location</label><input placeholder="cytogenetic location of the microindel" class="form-control" type="text" name="cytogen">
+				<label>Strand</label><input placeholder="strand of the microindel" class="form-control" type="text" name="strand">
+			</div>
+			<div class="container" class="form-control" class="form">
+				<label>Clinical Significance</label><select class="form-control" name="clin_sig">
+					<option value="not_provided">Not provided</option>
+					<option value="benign">Benign</option>
+					<option value="likely_benign">Likely Benign</option>
+					<option value="association">Association</option>
+					<option value="sensitivity">Confers Sensitivity</option>
+					<option value="drug_res">Drug Response</option>
+					<option value="protective">Protective</option>
+					<option value="risk">Risk Factor</option>
+					<option value="likely_pathogenic">Likely Pathogenic</option>
+					<option value="pathogenic">Pathogenic</option>
+					<option value="uncertain">Uncertain Significance</option>
+					<option value="other">Other</option>
+				</select>
+			</div>
+			<div class="container" class="form-control" class="form" id="dynamicPMID">	
+				<label>PMID</label><input placeholder="PubMed ID" class="form-control" type="text" name="PMID[]">
+			</div>
+			<input type="button" value="Add PubMed ID" onClick="addFields('dynamicPMID');">
+			<div class="container" class="form-control" class="form" id="dynamicDisease">
+				<label>Disease</label><input placeholder="Disease name related to the microindel" class="form-control" type="text" name="disease[]">
+			</div>
+			<input type="button" value="Add Disease" onClick="addFields('dynamicDisease');">
+			<div class="container" class="form-control" class="form" id="dynamicIDMIM">
+				<label>IDMIM</label><input placeholder="OMIM ID of the disease" class="form-control" type="text" name="IDMIM[]">
+			</div>
+			<input type="button" value="Add OMIM ID" onClick="addFields('dynamicIDMIM');">
+			<div class="container">
+				<button type="submit" class="button2">Submit</button><!-- mateixa class que sing in i sign up-->
+			</div>
+		</form>
+	</div>
+      <script>
+        function RespMenu() {
+          var x = document.getElementById("myMenu");
+          if (x.className === "menu") {
+            x.className += " responsive";
+          } else {
+            x.className = "menu";
+          }
+        } 
+      </script>
+      <script>
+      // Get the modal
+        var modal = document.getElementById('id01');
+
+      // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+          if (event.target == modal) {
+              modal.style.display = "none";
+            }
+        }
+      </script>
+  </body>
+</html>
