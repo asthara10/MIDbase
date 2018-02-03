@@ -13,22 +13,22 @@
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
   <body>
-       <div>
+       <h1 class="loginh1">MIOD login</h1>
+       <div class="login">
            <form action="login.php">
-            <div class="container">
               <label><b>Username</b></label>
-              <input type="text" placeholder="Enter Username" name="uname" required>
+		<br>
+              <input type="text" placeholder="Enter Username" name="uname" required >
+		<hr>
               <label><b>Password</b></label>
-              <input type="password" placeholder="Enter Password" name="psw" required>
-              <button type="submit">Login</button>
+              <input type="password" placeholder="Enter Password" name="psw" size="1" required >
+              <button type="submit" class="btn_login">Login</button>
               <label>
                 <input type="checkbox" checked="checked"> Remember me
               </label>
-            </div>
-            <div class="container" style="background-color:#FFFFFF">
-              <button type="button" class="cancelbtn">Cancel</button>
+		<hr>
+              <button type="button" class="btn btn-primary cancelbtn">Cancel</button>
               <span class="psw">Forgot <a href="#">password?</a></span>
-            </div>
           </form> 
         </div>
      </div>

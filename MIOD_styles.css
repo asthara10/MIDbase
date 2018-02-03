@@ -5,8 +5,10 @@
 }
 .first {
   width:50%;
-  float:left;
-  margin:auto;
+  float:0 auto;
+  margin:20px;
+  border: 1px solid DarkGray;
+  padding: 20px;
   overflow: hidden;
   display: inline-block;
   justify-content: center;
@@ -14,10 +16,12 @@
 }
 .second {
   width:50%;
-  float:left;
+  float:0 auto;
+  padding: 20px;
+  border: 1px solid DarkGray; 
   overflow: hidden;
   vertical-align: middle;
-  margin: auto;
+  margin: 20px;
 }
 
 
@@ -81,6 +85,16 @@ span.psw {
     }
 } 
 
+.btn_login {
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    background-color: CornflowerBlue;
+    width: 100%;
+}
+
 .button2 {
     background-color: #51a055;
     color: #a54040;
@@ -90,3 +104,15 @@ span.psw {
     cursor: pointer;
     width: 100%;
 }
+
+.loginh1 {
+	text-align: center;
+}
+
+.login {
+	margin: 0 auto;	/*Centering text*/
+	padding: 20px;
+	width: 30%;
+	border: 1px solid DarkGray; 
+}
+
