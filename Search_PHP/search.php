@@ -11,6 +11,18 @@
 	$textFields = Array('Disease.Diseasename', 'Disease.idMIM', 'Gene.GeneName', 'Gene.idENSEMBL', 'Location.CythogeneticLocation', 'Microindel.Name', 'Reference.DB');
 	//Fields to look into on text searches. Previously settled as fullindexes Eventually this will go to globals_miod.php
 
+	$select_search = "SELECT distinct Microindel.Name,Gene.GeneName,Gene.idENSEMBL,ClinicalSignificance.Value
+	FROM
+	Microindel,Location,Gene,ClinicalSignificance
+	WHERE
+	Microindel.idMicroindel=Location.Microindel_idMicroindel AND 	  	
+	Microindel.idMicroindel=Microindel_has_ClinicalSignificance.Microindel_idMicroindel AND
+	Microindel_has_ClinicalSignificance.ClinicalSignificance_idClinicalSignificance=ClinicalSignificance.idClinicalSignificance AND
+	Location.idLocation=Gene.Location.idLocation
+	 ";
+	/*The first part of any text search. Outputs the selected fields FROM the selected tables WHERE the primary keys and foreign keys 
+	match between them. It's complicate to understnad, ask me if any doubt (By: David)*/
+
     mysqli_select_db($id, "miod") or die(mysqli_error());
     //miod is the name of database we've created     
 ?>
@@ -35,20 +47,27 @@
     //Removes withespaces at the beggining and ending of chain
 echo "No syntactic errors\n";
     if(strlen($query) > 0){ // boolean true if the variable was empty or with spaces
-    	foreach (array_values($textFields) as $field) {
-		$ORconds[] = "MATCH (" . $field . ") AGAINST ('" . $query . "' IN BOOLEAN MODE)";
-	}
 	
-	echo join(" OR ",$ORconds);
         $query = htmlspecialchars($query); 
         // changes characters used in html to their equivalents, for example: < to &gt;
          
         $query = mysqli_real_escape_string($id, $query);
         // makes sure nobody uses SQL injection
        
-        $raw_results = mysqli_query($id, "SELECT * FROM Microindel WHERE (`Name` LIKE '%".$query."%')") or die(mysqli_error());
-        // * means that it selects all fields
-        // Microindel is the name of our table
+
+    	foreach (array_values($textFields) as $field) {
+		$ORconds[] = "MATCH (" . $field . ") AGAINST ('" . $query . "' IN BOOLEAN MODE)";
+	}
+	//create a match() against() query for every field in textFields global variable 
+
+	$sql=$select_search.join(" OR ",$ORconds)
+	//appends the OR conditions created by the query to the select basic search
+
+	echo $sql,"\n";
+
+        $raw_results = mysqli_query($id, $sql) or die(mysqli_error());
+	//executes sql query or return error message
+	//Iterate on everyone of the FULLTEXT fields, looking for any word match
          
         if(mysqli_num_rows($raw_results) > 0){ // if one or more rows are returned do following
              
@@ -69,7 +88,7 @@ echo "No syntactic errors\n";
         echo "Empty search. Write something, please!";
     }
 
-
+//SELECT distinct Microindel.idMicroindel,Microindel.Name,Location.EndGRCh38  FROM Microindel,Location WHERE Microindel.idMicroindel=Location.Microindel_idMicroindel AND MATCH (Microindel.Name) AGAINST ("rs1305061" IN BOOLEAN MODE);
 ?> 
 
 </body>
