@@ -15,6 +15,9 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
+CREATE SCHEMA IF NOT EXISTS `miod` DEFAULT CHARACTER SET utf8 ;
+USE `miod` ;
+
 --
 -- Table structure for table `ClinicalSignificance`
 --
@@ -50,7 +53,9 @@ CREATE TABLE `Disease` (
   `idDisease` int(11) NOT NULL,
   `DiseaseName` varchar(45) DEFAULT NULL,
   `idMIM` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`idDisease`)
+  PRIMARY KEY (`idDisease`),
+  FULLTEXT (`DiseaseName`),
+  FULLTEXT (`idMIM`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -78,6 +83,8 @@ CREATE TABLE `Gene` (
   `Location_idLocation` int(11) NOT NULL,
   PRIMARY KEY (`idGene`,`Location_idLocation`),
   KEY `fk_Gene_Location_idx` (`Location_idLocation`),
+  FULLTEXT (`GeneName`),
+  FULLTEXT (`idENSEMBL`),
   CONSTRAINT `fk_Gene_Location` FOREIGN KEY (`Location_idLocation`) REFERENCES `Location` (`idLocation`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB AUTO_INCREMENT=205 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -107,6 +114,7 @@ CREATE TABLE `Location` (
   `Strand` varchar(45) DEFAULT NULL,
   `Microindel_idMicroindel` int(11) NOT NULL,
   PRIMARY KEY (`idLocation`,`Microindel_idMicroindel`),
+  FULLTEXT (`CythogeneticLocation`),
   KEY `fk_Location_Variant1_idx` (`Microindel_idMicroindel`),
   CONSTRAINT `fk_Location_Variant1` FOREIGN KEY (`Microindel_idMicroindel`) REFERENCES `Microindel` (`idMicroindel`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -133,7 +141,9 @@ CREATE TABLE `Microindel` (
   `idMicroindel` int(11) NOT NULL,
   `Info` text,
   `Name` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`idMicroindel`)
+  PRIMARY KEY (`idMicroindel`),
+  FULLTEXT (`Info`),
+  FULLTEXT (`Name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -242,7 +252,8 @@ CREATE TABLE `Reference` (
   `idReference` int(11) NOT NULL,
   `PMID` text,
   `DB` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`idReference`)
+  PRIMARY KEY (`idReference`),
+  FULLTEXT (`PMID`,`DB`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 

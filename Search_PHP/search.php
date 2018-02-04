@@ -9,7 +9,7 @@
     */
      
 	$textFields = Array('Disease.Diseasename', 'Disease.idMIM', 'Gene.GeneName', 'Gene.idENSEMBL', 'Location.CythogeneticLocation', 'Microindel.Name', 'Reference.DB');
-	//Fields to look into on text searches. Eventually this will go to globals_miod.php
+	//Fields to look into on text searches. Previously settled as fullindexes Eventually this will go to globals_miod.php
 
     mysqli_select_db($id, "miod") or die(mysqli_error());
     //miod is the name of database we've created     
@@ -33,21 +33,20 @@
 
     $query = trim($query); 
     //Removes withespaces at the beggining and ending of chain
-
+echo "No syntactic errors\n";
     if(strlen($query) > 0){ // boolean true if the variable was empty or with spaces
     	foreach (array_values($textFields) as $field) {
-		echo $ORconds[] = "MATCH (" . $field . ") AGAINST ('" . $query . "' "
-. "IN BOOLEAN MODE)";
+		$ORconds[] = "MATCH (" . $field . ") AGAINST ('" . $query . "' IN BOOLEAN MODE)";
 	}
+	
+	echo join(" OR ",$ORconds);
         $query = htmlspecialchars($query); 
         // changes characters used in html to their equivalents, for example: < to &gt;
          
-        $query = mysqli_real_escape_string($query);
+        $query = mysqli_real_escape_string($id, $query);
         // makes sure nobody uses SQL injection
-         
-        $raw_results = mysqli_query("SELECT * FROM Microindel
-            WHERE (`Name` LIKE '%".$query."%')") or die(mysqli_error());
-             
+       
+        $raw_results = mysqli_query($id, "SELECT * FROM Microindel WHERE (`Name` LIKE '%".$query."%')") or die(mysqli_error());
         // * means that it selects all fields
         // Microindel is the name of our table
          
@@ -69,15 +68,6 @@
     else{ // if query length is less than minimum
         echo "Empty search. Write something, please!";
     }
-
-if ($_REQUEST['query1']) {
-	$ORconds = array();
-	foreach (array_values($textFields) as $field) {
-		$ORconds[] = "MATCH (" . $field . ") AGAINST ('" . $_REQUEST['query1'] . "' "
-. "IN BOOLEAN MODE)";
-}
-$ANDconds[] = "(" . join(" OR ", $ORconds) . ")";
-}
 
 
 ?> 
