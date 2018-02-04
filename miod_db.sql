@@ -253,7 +253,8 @@ CREATE TABLE `Reference` (
   `PMID` text,
   `DB` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`idReference`),
-  FULLTEXT (`PMID`,`DB`)
+  FULLTEXT (`PMID`),
+  FULLTEXT (`DB`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 

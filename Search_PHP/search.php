@@ -8,18 +8,13 @@
         if connection fails it will stop loading the page and display an error
     */
      
-	$textFields = Array('Disease.Diseasename', 'Disease.idMIM', 'Gene.GeneName', 'Gene.idENSEMBL', 'Location.CythogeneticLocation', 'Microindel.Name', 'Reference.DB');
+	$textFields = Array('Disease.DiseaseName', 'Disease.idMIM', 'Gene.GeneName', 'Gene.idENSEMBL', 'Microindel.Name','Microindel.Info', 'Reference.PMID', 'Reference.DB');
 	//Fields to look into on text searches. Previously settled as fullindexes Eventually this will go to globals_miod.php
 
-	$select_search = "SELECT distinct Microindel.Name,Gene.GeneName,Gene.idENSEMBL,ClinicalSignificance.Value
-	FROM
-	Microindel,Location,Gene,ClinicalSignificance
-	WHERE
-	Microindel.idMicroindel=Location.Microindel_idMicroindel AND 	  	
-	Microindel.idMicroindel=Microindel_has_ClinicalSignificance.Microindel_idMicroindel AND
-	Microindel_has_ClinicalSignificance.ClinicalSignificance_idClinicalSignificance=ClinicalSignificance.idClinicalSignificance AND
-	Location.idLocation=Gene.Location.idLocation
-	 ";
+	$select_search = "SELECT distinct Microindel.Name,Gene.GeneName,Gene.idENSEMBL,ClinicalSignificance.Value 
+FROM Microindel,Location,Gene,Microindel_has_ClinicalSignificance,ClinicalSignificance,Disease,Microindel_has_Disease,Microindel_has_Reference,Reference  WHERE Microindel.idMicroindel=Microindel_has_Disease.Microindel_idMicroindel AND Microindel_has_Disease.Disease_idDisease=Disease.idDisease AND Microindel.idMicroindel=Location.Microindel_idMicroindel AND Location.idLocation=Gene.Location_idLocation AND  Microindel.idMicroindel=Microindel_has_ClinicalSignificance.Microindel_idMicroindel AND Microindel_has_ClinicalSignificance.ClinicalSignificance_idClinicalSignificance=ClinicalSignificance.idClinicalSignificance AND Microindel.idMicroindel=Microindel_has_Reference.Microindel_idMicroindel AND 
+Microindel_has_Reference.Reference_idReference=Reference.idReference AND ( 
+";
 	/*The first part of any text search. Outputs the selected fields FROM the selected tables WHERE the primary keys and foreign keys 
 	match between them. It's complicate to understnad, ask me if any doubt (By: David)*/
 
@@ -45,7 +40,7 @@
 
     $query = trim($query); 
     //Removes withespaces at the beggining and ending of chain
-echo "No syntactic errors\n";
+echo "No syntactic errors\n\n";
     if(strlen($query) > 0){ // boolean true if the variable was empty or with spaces
 	
         $query = htmlspecialchars($query); 
@@ -60,10 +55,8 @@ echo "No syntactic errors\n";
 	}
 	//create a match() against() query for every field in textFields global variable 
 
-	$sql=$select_search.join(" OR ",$ORconds)
+	$sql=$select_search.join(" OR ",$ORconds)." );";
 	//appends the OR conditions created by the query to the select basic search
-
-	echo $sql,"\n";
 
         $raw_results = mysqli_query($id, $sql) or die(mysqli_error());
 	//executes sql query or return error message
