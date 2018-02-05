@@ -116,3 +116,21 @@ span.psw {
 	border: 1px solid DarkGray; 
 }
 
+/*searcher output*/
+table {
+	color:black;
+	font-size:100%;
+	font-family: sans-serif	;
+	border: 1px solid black;
+	border-collapse: collapse;
+	border-spacing: 5px;
+	padding: 10px;
+	margin: 20px;
+}
+th,td {
+	border: 1px solid black;
+	padding:5px;
+	margin: 5px;
+}
+
+
