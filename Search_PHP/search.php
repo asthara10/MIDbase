@@ -36,7 +36,9 @@ echo "No syntactic errors\n\n";
          
         $query = mysqli_real_escape_string($id, $query);
         // makes sure nobody uses SQL injection
-       
+
+	$query = $query."*";
+       //adding a wildchart at the end of the query we can match all word beggining by the query 
 
     	foreach (array_values($textFields) as $field) {
 		$ORconds[] = "MATCH (" . $field . ") AGAINST ('" . $query . "' IN BOOLEAN MODE)";
@@ -70,12 +72,12 @@ echo "No syntactic errors\n\n";
 <head>
     <title>Search</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link rel="stylesheet" type="text/css" href="MIOD_styles.css"/>
 </head>
 <body>
 	<h1>MIOD-Search results</h1>
 	<p>Number of hits: <?php echo count($GLOBALS['results']),"\n"; ?></p>
-	<table style="color:black;font-size:100%;font-family:courier;border: 1px solid black;border-collapse: collapse; border-spacing: 5px;padding: 10px;margin: 20px;">
+	<table>
 		<tr>
 			<th rowspan="2"><strong>Microindel name<strong></th>
 			<th colspan="2" ><strong>Location<strong></th>
@@ -88,7 +90,7 @@ echo "No syntactic errors\n\n";
 		</tr>			
 		<?php
 			foreach ($GLOBALS['raw_results'] as $row){
-				echo "<tr><td><a Name=\"$query\">",$row['Name'],"</a></td><td>",$row['StartGRCh38'],"</td><td>",$row['EndGRCh38'],"</td><td>",$row['PMID'],"</td></tr>";
+				echo "<tr><td><a Name=\"$query\" href=\"output.php\">",$row['Name'],"</a></td><td>",$row['StartGRCh38'],"</td><td>",$row['EndGRCh38'],"</td><td>",$row['Value'],"</td><td>",$row['PMID'],"</td></tr>";
 			} 
 		?>	
 	</table>
