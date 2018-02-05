@@ -20,18 +20,11 @@ function addFields(divName){
 	  			newdiv.innerHTML = "<label>Gene" + (genes + 1) + "</label><input class='form-control' type='text' name='gene[]'>";
 	  			document.getElementById(divName).appendChild(newdiv);
 	  			genes++;
-	  		}
-		break;
-		case 'dynamicEnsmbl':
-     		if (ensmbls == ensmbllimit)  {
-          		alert("You have reached the limit of adding " + ensmbls + " Ensmbl IDs");
-     		}
-     		else {
           		var newdiv = document.createElement('div');
           		newdiv.innerHTML = "<label>Gene Ensmbl ID" + (ensmbls + 1) + "</label><input class='form-control' type='text' name='EnsmblID[]'>";
           		document.getElementById(divName).appendChild(newdiv);
           		ensmbls++;
-     		}
+	  		}
 		break;
 		case 'dynamicPMID':
      		if (PMIDs == PMIDlimit)  {
@@ -53,20 +46,13 @@ function addFields(divName){
           		newdiv.innerHTML = "<label>Disease" + (diseases + 1) + "</label><input class='form-control' type='text' name='disease[]'>";
           		document.getElementById(divName).appendChild(newdiv);
           		diseases++;
-     		}
-		break;
-		case 'dynamicIDMIM':
-     		if (MIMs == MIMlimit)  {
-          		alert("You have reached the limit of adding " + MIMs + " OMIM IDs");
-     		}
-     		else {
           		var newdiv = document.createElement('div');
           		newdiv.innerHTML = "<label>IDMIM" + (MIMs + 1) + "</label><input class='form-control' type='text' name='IDMIM[]'>";
           		document.getElementById(divName).appendChild(newdiv);
           		MIMs++;
      		}
 		break;
-          default:
-               alert("an error occured");
+        default:
+            alert("an error occured");
 	}
 }
