@@ -1,36 +1,52 @@
 <!DOCTYPE html>
 <html>
   <head>
-      <title>Contact Us</title>
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-      <link rel="stylesheet" href="custom.css">
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--for compatibility with explorer-->
-      <meta name="viewport" content="width=device-width, initial-scale=1"> <!--responsive page-->
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> <!--Bootstrap stylesheet-->
-      <link rel="stylesheet" type="text/css" href="MIOD_styles.css"> <!--My style sheet-->
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>Contact Us</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="MIOD_styles.css">
   </head>
+  
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="##navbarToggleExternalContent" aria-controls="#navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-item nav-link" href="MIOD.html">Home </a>
-            <a class="nav-item nav-link" href="search.html">Advanced Search</a>
-            <a class="nav-item nav-link" href="MIODform.html">Introduce Data</a>
-            <a class="nav-item nav-link active" href="Contact.html">Contact Us<span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="about.html">About Us</a>
+          <nav class="navbar navbar-expand-md bg-light navbar-light">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+         <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+               <a class="nav-item nav-link" href="MIOD.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-item nav-link" href="search.html">Advanced Search</a>
+              </li>  
+              <li class="nav-item">
+                <a<a class="nav-item nav-link active" href="MIODform.html">Introduce Data</a>
+              </li> 
+              <li class="nav-item">
+                 <a class="nav-item nav-link active" href="Contact.html">Contact Us<span class="sr-only">(current)</span></a>
+              </li> 
+              <li class="nav-item">
+                <a class="nav-item nav-link" href="about.html">About Us</a>
+              </li>  
+            </ul>
           </div>
+<<<<<<< HEAD
         </div>
             <form action="search.php" method="GET">
         	<input type="text" name="query" />
         	<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
 	    </form>
+=======
+            <form class="form-inline">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+>>>>>>> f827283243a8df0581a9da59dbb6dac4ce5524e6
             <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="button">Login</button>
             <div id="id01" class="modal">
                 <form class="modal-content animate" action="/login.php">
@@ -66,26 +82,5 @@
           </div>
         </form>
       </div>
-        <script>
-          function RespMenu() {
-            var x = document.getElementById("myMenu");
-            if (x.className === "menu") {
-              x.className += " responsive";
-            } else {
-              x.className = "menu";
-            }
-          } 
-        </script>
-        <script>
-      // Get the modal
-        var modal = document.getElementById('id01');
-
-      // When the user clicks anywhere outside of the modal, close it
-       window.onclick = function(event) {
-          if (event.target == modal) {
-              modal.style.display = "none";
-            }
-        }
-      </script>
     </body>
   </html>

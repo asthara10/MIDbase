@@ -1,21 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
-<head> <!--helena pots afegit classes als div i al label i als button per fer els css però no modificar res-->
-	<meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--for compatibility with explorer-->
-    <meta name="viewport" content="width=device-width, initial-scale=1"> <!--responsive page-->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="custom.css">
-	<script src="addField.js" language="Javascript" type="text/javascript"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-<body>
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <a class="navbar-brand" href="#"></a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="##navbarToggleExternalContent" aria-controls="#navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+<html>
+  <head>
+    <title>Introduce Data</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="MIOD_styles.css">
+  </head>
+  
+  <body>
+          <nav class="navbar navbar-expand-md bg-light navbar-light">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
           </button>
+<<<<<<< HEAD
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
               <a class="nav-item nav-link" href="MIOD.html">Home</a>
@@ -29,6 +30,52 @@
             <form action="login.html">
              <input type="button" value="LogIn">
              </form>
+=======
+         <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+               <a class="nav-item nav-link" href="MIOD.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-item nav-link" href="search.html">Advanced Search</a>
+              </li>  
+              <li class="nav-item">
+                <a<a class="nav-item nav-link active" href="MIODform.html">Introduce Data<span class="sr-only">(current)</span></a>
+              </li> 
+              <li class="nav-item">
+                 <a class="nav-item nav-link" href="Contact.html">Contact Us</a>
+              </li> 
+              <li class="nav-item">
+                <a class="nav-item nav-link" href="about.html">About Us</a>
+              </li>  
+              <li class="nav-item">
+                <a class="nav-item nav-link" href="MIOD.html">MIOD</a>
+              </li>  
+            </ul>
+          </div>
+           <form class="form-inline">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+            <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="button">Login</button>
+            <div id="id01" class="modal">
+                <form class="modal-content animate" action="/login.php">
+                  <div class="container">
+                   <form>
+                      User name:<br>
+                      <input type="text" name="username"><br>
+                      User password:<br>
+                      <input type="password" name="psw" size = "15"><br>
+                    </form>  
+                    <button type="submit" class="button3">Login</button>
+                    <label>
+                    <input type="checkbox" checked="checked"> Remember me</label>
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                    <span class="psw"><a href="#"> Forgot password?</a></span>
+                  </div>
+                </form>
+              </div>
+>>>>>>> f827283243a8df0581a9da59dbb6dac4ce5524e6
              <form action="signup.html">
               <input type="button" value="SignUp">
             </form>
@@ -85,6 +132,7 @@
 			</div>
 		</form>
 	</div>
+<<<<<<< HEAD
 	<script>
 		function RespMenu() {
 			var x = document.getElementById("myMenu");
@@ -97,3 +145,7 @@
 	</script>
 </body>
 </html>
+=======
+  </body>
+</html>
+>>>>>>> f827283243a8df0581a9da59dbb6dac4ce5524e6
