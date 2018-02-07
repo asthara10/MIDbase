@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-      <title>About Us</title>
+      <title>MIOD Home Page</title>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
       <link rel="stylesheet" href="custom.css">
       <meta charset="utf-8">
@@ -22,16 +22,16 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-              <a class="nav-item nav-link" href="MIOD.html">Home </a>
+              <a class="nav-item nav-link active" href="MIOD.html">Home <span class="sr-only">(current)</span></a>
               <a class="nav-item nav-link" href="search.html">Advanced Search</a>
               <a class="nav-item nav-link" href="MIODform.html">Introduce Data</a>
               <a class="nav-item nav-link" href="Contact.html">Contact Us</a>
-              <a class="nav-item nav-link active" href="about.html">About Us<span class="sr-only">(current)</span></a>
+              <a class="nav-item nav-link" href="about.html">About Us</a>
             </div>
           </div>
-            <form action="search.php" method="GET">
+       	    <form action="search.php" method="GET">
         	<input type="text" name="query" />
-        	<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        	<input type="submit" value="Search" />
 	    </form>
             <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="button">Login</button>
             <div id="id01" class="modal">
@@ -55,22 +55,23 @@
               <input type="button" value="SignUp" class="button">
             </form>
       </nav>
-       <div class="columns">
+      <div class="columns">
         <div class="first">
-          <h3> David Aranda</h3>
-          <p> Link to the website </p>
+          <h3> MIOD's purpose</h3>
+          <p> The purpose of MIOD is to provide.... </p>
         </div>
         <div class = "second">
-          <h3> Júlia Mir</h3>
-          <p> Link to the website </p>
+          <h3> How to use it</h3>
+          <p> Here goes a brief explanation on how to use MIOD:<br> · How to use the advanced search <br> · How to introduce data <br> · How to contact us</p>
        <div class="columns">
         <div class="first">
-          <h3> Helena Rodriguez</h3>
-          <p> Link to the website </p>
+          <h3> MIOD's consortium</h3>
+          <p> Beign part pf the MIOD consortium will allow you to submit data to our database. This function will only be available for people of the cnsortiu to ensure that data is veridic. Members of the consortium should sign up using using a university/institute mail....</p>
         </div>
         <div class = "second">
-          <h3> Marta Sanvicente</h3>
-         <p> Link to the website </p>
+          <h3> ?????</h3>
+          <p> No se que posar aquí, però seria per quadrar espai pq quedi millor. podirem fer lo de last updates?</p>
+
       <script>
         function RespMenu() {
           var x = document.getElementById("myMenu");
@@ -83,14 +84,14 @@
       </script>
       <script>
       // Get the modal
-        var modal = document.getElementById('id01');
+      var modal = document.getElementById('id01');
 
       // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function(event) {
+      window.onclick = function(event) {
           if (event.target == modal) {
               modal.style.display = "none";
-            }
-        }
+          }
+      }
       </script>
-  </body>
+    </body>
 </html>

@@ -23,32 +23,19 @@
               <a class="nav-item nav-link active" href="MIODform.html">Introduce Data<span class="sr-only">(current)</span></a>
               <a class="nav-item nav-link" href="Contact.html">Contact Us</a>
               <a class="nav-item nav-link" href="about.html">About Us</a>
+              <a class="nav-item nav-link" href="MIOD.html">MIOD</a>
             </div>
-           <form class="form-inline">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          </form>
-            <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="button">Login</button>
-            <div id="id01" class="modal">
-                <form class="modal-content animate" action="/login.php">
-                  <div class="container">
-                   <form>
-                      User name:<br>
-                      <input type="text" name="username"><br>
-                      User password:<br>
-                      <input type="password" name="psw" size = "15"><br>
-                    </form>  
-                    <button type="submit" class="button3">Login</button>
-                    <label>
-                    <input type="checkbox" checked="checked"> Remember me</label>
-                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-                    <span class="psw"><a href="#"> Forgot password?</a></span>
-                  </div>
-                </form>
-              </div>
+          </div>
+            <form action="login.html">
+             <input type="button" value="LogIn">
+             </form>
              <form action="signup.html">
-              <input type="button" value="SignUp" class="button">
+              <input type="button" value="SignUp">
             </form>
+            <form action="search.php" method="GET">
+        	<input type="text" name="query" />
+        	<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+	    </form>
       </nav>
 	<div class="container">
 		<p id="com_text">Fill in the form below:</p>
@@ -59,12 +46,9 @@
 			</div>
 			<div class="container" class="form-control" class="form" id="dynamicGene">
 				<label>Gene</label><input placeholder="Gene name" class="form-control" type="text" name="gene[]">
-			</div>
-			<input type="button" value="Add gene" onClick="addFields('dynamicGene');">
-			<div class="container" class="form-control" class="form" id="dynamicEnsmbl">
 				<label>Gene Ensmbl ID</label><input placeholder="Ensmbl ID of the gene" class="form-control" type="text" name="EnsmblID[]">
 			</div>
-			<input type="button" value="Add Ensmbl ID" onClick="addFields('dynamicEnsmbl');">
+			<input type="button" value="Add gene" onClick="addFields('dynamicGene');">
 			<div class="container" class="form-control" class="form">		
 				<label>Start Positon</label><input placeholder="start position of the microindel" class="form-control" type="text" name="start">
 				<label>End Positon</label><input placeholder="end position of the microindel" class="form-control" type="text" name="end">
@@ -93,37 +77,23 @@
 			<input type="button" value="Add PubMed ID" onClick="addFields('dynamicPMID');">
 			<div class="container" class="form-control" class="form" id="dynamicDisease">
 				<label>Disease</label><input placeholder="Disease name related to the microindel" class="form-control" type="text" name="disease[]">
-			</div>
-			<input type="button" value="Add Disease" onClick="addFields('dynamicDisease');">
-			<div class="container" class="form-control" class="form" id="dynamicIDMIM">
 				<label>IDMIM</label><input placeholder="OMIM ID of the disease" class="form-control" type="text" name="IDMIM[]">
 			</div>
-			<input type="button" value="Add OMIM ID" onClick="addFields('dynamicIDMIM');">
+			<input type="button" value="Add Disease" onClick="addFields('dynamicDisease');">
 			<div class="container">
 				<button type="submit" class="button2">Submit</button><!-- mateixa class que sing in i sign up-->
 			</div>
 		</form>
 	</div>
-      <script>
-        function RespMenu() {
-          var x = document.getElementById("myMenu");
-          if (x.className === "menu") {
-            x.className += " responsive";
-          } else {
-            x.className = "menu";
-          }
-        } 
-      </script>
-      <script>
-      // Get the modal
-        var modal = document.getElementById('id01');
-
-      // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function(event) {
-          if (event.target == modal) {
-              modal.style.display = "none";
-            }
-        }
-      </script>
-  </body>
+	<script>
+		function RespMenu() {
+			var x = document.getElementById("myMenu");
+			if (x.className === "menu") {
+				x.className += " responsive";
+			} else {
+				x.className = "menu";
+			}
+		}	
+	</script>
+</body>
 </html>

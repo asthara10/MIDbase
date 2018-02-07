@@ -1,5 +1,5 @@
 <?php
-    $id = mysqli_connect("localhost", "root", "Microindels4") or die("Error connecting to database: ".mysqli_error());
+    $id = mysqli_connect("localhost", "admiod", "Microindels4") or die("Error connecting to database: ".mysqli_error());
     /*
         localhost - it's location of the mysql server, usually localhost
         root - your username
