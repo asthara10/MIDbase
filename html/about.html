@@ -35,10 +35,10 @@
               </li>  
             </ul>
           </div>
-            <form action="search.php" method="GET">
-        	<input type="text" name="query" />
-        	<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-	    </form>
+           <form class="form-inline">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
             <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="button">Login</button>
             <div id="id01" class="modal">
                 <form class="modal-content animate" action="/login.php">
