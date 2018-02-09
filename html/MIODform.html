@@ -1,29 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
-<head> <!--helena pots afegit classes als div i al label i als button per fer els css però no modificar res-->
-	<meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--for compatibility with explorer-->
-    <meta name="viewport" content="width=device-width, initial-scale=1"> <!--responsive page-->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="custom.css">
-	<script src="addField.js" language="Javascript" type="text/javascript"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-<body>
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <a class="navbar-brand" href="#"></a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="##navbarToggleExternalContent" aria-controls="#navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+<html>
+  <head>
+    <title>Introduce Data</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="MIOD_styles.css">
+  </head>
+  
+  <body>
+          <nav class="navbar navbar-expand-md bg-light navbar-light">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <a class="nav-item nav-link" href="MIOD.html">Home</a>
-              <a class="nav-item nav-link" href="search.html">Advanced Search</a>
-              <a class="nav-item nav-link active" href="MIODform.html">Introduce Data<span class="sr-only">(current)</span></a>
-              <a class="nav-item nav-link" href="Contact.html">Contact Us</a>
-              <a class="nav-item nav-link" href="about.html">About Us</a>
-            </div>
+         <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+               <a class="nav-item nav-link" href="MIOD.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-item nav-link" href="search.html">Advanced Search</a>
+              </li>  
+              <li class="nav-item">
+                <a<a class="nav-item nav-link active" href="MIODform.html">Introduce Data<span class="sr-only">(current)</span></a>
+              </li> 
+              <li class="nav-item">
+                 <a class="nav-item nav-link" href="Contact.html">Contact Us</a>
+              </li> 
+              <li class="nav-item">
+                <a class="nav-item nav-link" href="about.html">About Us</a>
+              </li>  
+              <li class="nav-item">
+                <a class="nav-item nav-link" href="MIOD.html">MIOD</a>
+              </li>  
+            </ul>
+          </div>
            <form class="form-inline">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
@@ -104,26 +118,5 @@
 			</div>
 		</form>
 	</div>
-      <script>
-        function RespMenu() {
-          var x = document.getElementById("myMenu");
-          if (x.className === "menu") {
-            x.className += " responsive";
-          } else {
-            x.className = "menu";
-          }
-        } 
-      </script>
-      <script>
-      // Get the modal
-        var modal = document.getElementById('id01');
-
-      // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function(event) {
-          if (event.target == modal) {
-              modal.style.display = "none";
-            }
-        }
-      </script>
   </body>
 </html>
