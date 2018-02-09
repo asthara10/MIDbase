@@ -1,9 +1,9 @@
 <?php
 
 // Connecting to the server
-$servername = ""; //use the servername
-$username = "admiod"; //use our username
-$password = "Microindels4"; //use our password
+$servername = "localhost"; //use the servername
+$username = "root"; //use our username
+$password = "1994"; //use our password
 $database = "miod";
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $database);
@@ -146,6 +146,8 @@ if (!empty($_REQUEST["microindel_name"])) {
 				}
 			}
 			else {
+				$queryId = "SELECT idReference FROM Reference WHERE PMID = '$pmid';";
+				$result = mysqli_query($conn, $queryId);
 				if (mysqli_num_rows($result) > 0) {
 					$row = mysqli_fetch_assoc($result);
 					$pmid_id = $row["idReference"];
@@ -186,6 +188,8 @@ if (!empty($_REQUEST["microindel_name"])) {
 				}
 			}
 			else {
+				$queryId = "SELECT idDisease FROM Disease WHERE DiseaseName = '$disease';";
+				$result = mysqli_query($conn, $queryId);
 				if (mysqli_num_rows($result) > 0) {
 					$row = mysqli_fetch_assoc($result);
 					$dis_id = $row["idDisease"];
@@ -197,7 +201,51 @@ if (!empty($_REQUEST["microindel_name"])) {
 	}
 
 	//Location Managment
+	if (!empty($_REQUEST["start"])) {
+		if ((empty($_REQUEST["end"])) or (empty($_REQUEST["chr"])) or (empty($_REQUEST["strand"]))) {
+			echo '<script type="text/javascript">
+			alert("All location fields are required in order to add a location");
+			</script>';
+		}
+		else {
+			$tempstart = $_REQUEST["start"];
+			$tempend = $_REQUEST["end"];
+			$tempchr = $_REQUEST["chr"];
+			$tempstrand = $_REQUEST["strand"];
 
+			$request = "SELECT idLocation FROM Location WHERE StartGRCh38='$tempstart' AND EndGRCh38='$tempend' AND CythogeneticLocation='$tempchr' AND Strand='$tempstrand';";
+			$check_exist = mysqli_query($conn, $request);
+			$no_exist = empty(mysqli_num_rows($check_exist));
+
+			if($no_exist){
+				$queryActuaId = "SELECT MAX(idLocation) FROM Location;";
+				$result = mysqli_query($conn, $queryActuaId);
+				$actual_id = 0;
+				if (!empty($result)) {
+					if (mysqli_num_rows($result) > 0) {
+						$row = mysqli_fetch_assoc($result);
+						$actual_id = $row["MAX(idLocation)"];
+					} else {
+						$actual_id = 0;
+					}
+				} else {
+					$actual_id = 0;
+				}
+				$location_id = $actual_id+1;		
+			}
+			else {
+				$queryId = "SELECT idLocation FROM Location WHERE StartGRCh38='$tempstart' AND EndGRCh38='$tempend' AND CythogeneticLocation='$tempchr' AND Strand='$tempstrand';";
+				$result = mysqli_query($conn, $queryId);
+				if (mysqli_num_rows($result) > 0) {
+					$row = mysqli_fetch_assoc($result);
+					$location_id = $row["idLocation"];
+					echo '<script type="text/javascript">
+					alert('.$location_id.');
+					</script>';	
+				} 
+			}
+		}
+	}
 
 	//Gene Managment
 	$tempGene = $_REQUEST["gene"];
@@ -210,7 +258,7 @@ if (!empty($_REQUEST["microindel_name"])) {
 			$gen_id = 0;
 			if($no_exist){
 				$EnsID = $_REQUEST["EnsmblID"];
-				$queryActuaId = "SELECT MAX(idGebe) FROM Gene;";
+				$queryActuaId = "SELECT MAX(idGene) FROM Gene;";
 				$result = mysqli_query($conn, $queryActuaId);
 				$actual_id = 0;
 				if (!empty($result)) {
@@ -224,18 +272,20 @@ if (!empty($_REQUEST["microindel_name"])) {
 					$actual_id = 0;
 				}
 				$gen_id = $actual_id+1;	
-				$sql = "INSERT INTO Gene (idGene, GeneName, idENSMBL) VALUES ('$gen_id','$gene', '$EnsID[$i]');"; //Afegir idLocation!!!	
-				if (!mysqli_query($conn, $sql)) {
-					echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-				}
 			}
 			else {
+				$queryId = "SELECT idGene FROM Gene WHERE GeneName = '$gene';";
+				$result = mysqli_query($conn, $queryId);
 				if (mysqli_num_rows($result) > 0) {
 					$row = mysqli_fetch_assoc($result);
 					$gen_id = $row["idGene"];
 				} 
 			}
-			array_push($gene_id,$gen_id);
+			$sqlgene = "INSERT INTO Gene (idGene, GeneName, idENSEMBL, Location_idLocation) VALUES ('$gen_id','$gene', '$EnsID[$i]', '$location_id');";
+			if (!mysqli_query($conn, $sqlgene)) {
+				$all_correct = false;
+				echo "Error: " . $sqlgene . "<br>" . mysqli_error($conn);	
+			}
 		}
 		$i++;
 	}
@@ -263,7 +313,13 @@ if (!empty($_REQUEST["microindel_name"])) {
 			echo "Error: " . $sqlref . "<br>" . mysqli_error($conn);	
 		}
 	}
-	
+
+	$sqlloc = "INSERT INTO Location (idLocation, StartGRCh38, EndGRCh38, CythogeneticLocation, Strand, Microindel_idMicroindel) VALUES ('$location_id','$tempstart', '$tempend', '$tempchr', '$tempstrand', '$microindel_id');";
+	if (!mysqli_query($conn, $sqlloc)) {
+		$all_correct = false;
+		echo "Error: " . $sqlloc . "<br>" . mysqli_error($conn);	
+	}
+
 	foreach ($disease_id as $disid) {
 		$sqldis = "INSERT INTO Microindel_has_Disease (Microindel_idMicroindel, Disease_idDisease) VALUES ('$microindel_id', '$disid');";
 		if (!mysqli_query($conn, $sqldis)) {
