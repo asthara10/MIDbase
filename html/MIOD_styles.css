@@ -171,18 +171,19 @@ span.psw {
   margin: auto;
 }
 
-/*Output things*/
-table {
-	color:black;
-	font-size:100%;
-	font-family: sans-serif	;
-	border: 1px solid black;
-	border-collapse: collapse;
-	border-spacing: 5px;
-	padding: 10px;
-	margin: 20px;
+/*For the table of resuts*/
+.output-header{
+  margin-left: 5%;
+  padding-top: 1%;
+  padding-bottom: 1%;
 }
-th,td {
-	border: 1px solid black;
-	padding:5px;
-	margin: 5px;
+
+/*For the table of resuts*/
+.output {
+  margin:5%;
+  margin-top: 0;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  border: solid gray 1px;
+  background-color: #eeeeef;
+}
