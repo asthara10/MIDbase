@@ -172,16 +172,16 @@ span.psw {
 }
 
 /*For the table of resuts*/
-.output-header{
-  margin-left: 5%;
-  padding-top: 1%;
-  padding-bottom: 1%;
+.output-container{
+  max-width: 70%;
+  margin: 0 auto;
+  margin-top: 1%;
 }
 
 /*For the table of resuts*/
 .output {
-  margin:5%;
   margin-top: 0;
+  margin-bottom: 5%;
   padding-top: 1%;
   padding-bottom: 1%;
   border: solid gray 1px;
