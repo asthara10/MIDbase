@@ -55,7 +55,6 @@ CREATE TABLE `Disease` (
   `idMIM` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`idDisease`),
   FULLTEXT (`DiseaseName`),
-  FULLTEXT (`idMIM`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -84,7 +83,6 @@ CREATE TABLE `Gene` (
   PRIMARY KEY (`idGene`,`Location_idLocation`),
   KEY `fk_Gene_Location_idx` (`Location_idLocation`),
   FULLTEXT (`GeneName`),
-  FULLTEXT (`idENSEMBL`),
   CONSTRAINT `fk_Gene_Location` FOREIGN KEY (`Location_idLocation`) REFERENCES `Location` (`idLocation`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB AUTO_INCREMENT=205 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -141,7 +139,6 @@ CREATE TABLE `Microindel` (
   `Info` text,
   `Name` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`idMicroindel`),
-  FULLTEXT (`Info`),
   FULLTEXT (`Name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -252,8 +249,6 @@ CREATE TABLE `Reference` (
   `PMID` text,
   `DB` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`idReference`),
-  FULLTEXT (`PMID`),
-  FULLTEXT (`DB`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 

@@ -1,9 +1,9 @@
-awk 'NR>1 { FS="\t";OFS="\t"; print $1+197,$2,$3 }' MicroindelNCBI.txt >> ../ENSEMBL_data/ENSEMBL_Microindel.txt
+awk 'NR>1 { FS="\t";OFS="\t"; print $1+197,$2,$3,$4 }' MicroindelNCBI.txt >> ../ENSEMBL_data/ENSEMBL_Microindel.txt
 awk 'NR>1 { FS="\t";OFS="\t"; print $1+2,$2,$3 }' DiseaseNCBI.txt >> ../ENSEMBL_data/ENSEMBL_Disease.txt
-awk 'NR>1 { FS="\t";OFS="\t"; print $1+210,$2,$3,$4,$5,$6+197 }' LocationNCBI.txt >> ../ENSEMBL_data/ENSEMBL_location.txt
+awk 'NR>1 { FS="\t";OFS="\t"; print $1+197,$2,$3,$4,$5 }' LocationNCBI.txt >> ../ENSEMBL_data/ENSEMBL_location.txt
 #Clinsig: tal qual
-awk 'NR>1 { FS="\t";OFS="\t"; print $1+191,$2,$3+210,$4 }' GeneNCBI.txt >> ../ENSEMBL_data/ENSEMBL_Gene.txt
-awk 'NR>2 { FS="\t";OFS="\t"; print $1+10,$2,$3 }' ReferencesNCBI.txt >> ../merged_data/ENSEMBL_Reference.txt #Retocs manuals per les Non-provided
-awk 'NR>1 { FS="\t";OFS="\t"; print $1+197,$2+2 }' MicroindelDiseaseNCBI.txt >> ../merged_data/ENSEMBL_MicroindelDisease.txt
-awk 'NR>1 { FS="\t";OFS="\t"; print $1+197,$2+10 }' MicroIndelRefNCBI.txt >> ../merged_data/ENSEMBL_MicroindelRef.txt #Retocs manuals per les Non-provided
+awk 'NR>1 { FS="\t";OFS="\t"; print $1+109,$2,$3+196,$4 }' GeneNCBI.txt >> ../ENSEMBL_data/ENSEMBL_Gene.txt
+awk 'NR>2 { FS="\t";OFS="\t"; print $1+10,$2,$3 }' ReferencesNCBI.txt >> ../ENSEMBL_data/ENSEMBL_Reference.txt #Retocs manuals per les Non-provided
+awk 'NR>1 { FS="\t";OFS="\t"; print $1+197,$2+2 }' MicroindelDiseaseNCBI.txt >> ../ENSEMBL_data/ENSEMBL_MicroindelDisease.txt
+awk 'NR>1 { FS="\t";OFS="\t"; print $1+197,$2+10 }' MicroIndelRefNCBI.txt >> ../ENSEMBL_data/ENSEMBL_MicroindelRef.txt #Retocs manuals per les Non-provided
 

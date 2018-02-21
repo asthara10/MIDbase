@@ -1,12 +1,12 @@
-ID_Microindel	Name	Info
-1	DUP22Q11.2	
-2	DUPXP11.22	
-3	DUP3Q29	
-4	CXDUPQ26.3	
-5	DEL15Q13.3	
-6	DELXQ28	
-7	DEL3Q29	
-8	DEL17Q21.31	
-9	LOC106736481	This region is known to undergo non-allelic homologous recombination (NAHR) with a similar low-copy repeat region, the 15q13 proximal microdeletion breakpoint recombination region, which is located nearly 2 Mb centromere-proximal to this region, in direct orientation. NAHR between these recombination regions can lead to deletions of the intervening sequence, and has been associated with intellectual disabilities and/or developmental delays. While deletions of the intervening sequences has been observed in many affected individuals, finer mapping of the recombination regions has been limited to a small number of individuals. This recombination region partially overlaps that of a golgin A8 family member (GOLGA8 family), and the palindromic nature of the genes within this gene family has been implicated in the recombination events. [provided by RefSeq, Oct 2016]
-10	LOC106736480	This region is known to undergo non-allelic homologous recombination (NAHR) with a similar low-copy repeat region, the 15q13 distal microdeletion recombination region, which is located nearly 2 Mb centromere-distal to this region, in direct orientation. NAHR between these recombination regions can lead to deletions of the intervening sequence, and may be associated with autism. While deletions of the intervening sequences has been observed in many affected individuals, finer mapping of the recombination regions has been limited to a small number of individuals. This recombination region partially overlaps that of a golgin A8 family member (GOLGA8 family), and the palindromic nature of the genes within this gene family has been implicated in the recombination events. [provided by RefSeq, Oct 2016]
-11	DEL17Q11.2	
+ID_Microindel	Name	Info	ID_Location
+1	DUP22Q11.2		1
+2	DUPXP11.22		2
+3	DUP3Q29		3
+4	CXDUPQ26.3		4
+5	DEL15Q13.3		5
+6	DELXQ28		6
+7	DEL3Q29		7
+8	DEL17Q21.31		8
+9	LOC106736481	This region is known to undergo non-allelic homologous recombination (NAHR) with a similar low-copy repeat region, the 15q13 proximal microdeletion breakpoint recombination region, which is located nearly 2 Mb centromere-proximal to this region, in direct orientation. NAHR between these recombination regions can lead to deletions of the intervening sequence, and has been associated with intellectual disabilities and/or developmental delays. While deletions of the intervening sequences has been observed in many affected individuals, finer mapping of the recombination regions has been limited to a small number of individuals. This recombination region partially overlaps that of a golgin A8 family member (GOLGA8 family), and the palindromic nature of the genes within this gene family has been implicated in the recombination events. [provided by RefSeq, Oct 2016]	9
+10	LOC106736480	This region is known to undergo non-allelic homologous recombination (NAHR) with a similar low-copy repeat region, the 15q13 distal microdeletion recombination region, which is located nearly 2 Mb centromere-distal to this region, in direct orientation. NAHR between these recombination regions can lead to deletions of the intervening sequence, and may be associated with autism. While deletions of the intervening sequences has been observed in many affected individuals, finer mapping of the recombination regions has been limited to a small number of individuals. This recombination region partially overlaps that of a golgin A8 family member (GOLGA8 family), and the palindromic nature of the genes within this gene family has been implicated in the recombination events. [provided by RefSeq, Oct 2016]	10
+11	DEL17Q11.2		11
