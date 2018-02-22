@@ -9,8 +9,6 @@
 
     $sql = $select_search . "Microindel.Name = \"" . $name . "\");";
 
-    print($sql);
-
     $raw_results = mysqli_query($id, $sql) or die(mysqli_error());
     $results = mysqli_fetch_array($raw_results);
     //Transform results in an associative array, where keys are SQL column names 
@@ -60,11 +58,15 @@
 <body>
     <div class="output-container">
         <h1><?php echo $results["Name"]; ?></h1>
+        <p><strong>Alleles:</strong></p>
+        <ul type="none">
+            <li><?php echo $results["Info"]; ?></li>
+        </ul>
         <p><strong>Genomic location:</strong></p>
         <ul type="none">
             <li>Chromosome: <?php echo $results["Chromosome"]; ?></li>
-            <li>Start: <?php echo $results["StartGRCh38"]; ?></li>
-            <li>End: <?php echo $results["EndGRCh38"]; ?></li>
+            <li>Start: <?php echo $results["Start"]; ?></li>
+            <li>End: <?php echo $results["End"]; ?></li>
         </ul>
         <p><strong>Associated gene:</strong></p>
         <ul type="none">

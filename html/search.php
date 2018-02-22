@@ -21,13 +21,11 @@
     $query = mysqli_real_escape_string($id, $query);
     // makes sure nobody uses SQL injection
 
-    $query = $query."*";
-    //adding a wildchart at the end of the query we can match all word beggining by the query 
-
     foreach (array_values($textFields) as $field) {
-    	$ORconds[] = "MATCH (" . $field . ") AGAINST ('" . $query . "' IN BOOLEAN MODE)";
+    	$ORconds[] = " " . $field . " LIKE '%" . $query . "%' ";
 	   //create a match() against() query for every field in textFields global variable 
     }
+
 	$sql = $select_search.join(" OR ",$ORconds)." );";
 	//appends the OR conditions created by the query to the select basic search
 

@@ -18,7 +18,7 @@
     *
     FROM 
     Microindel,
-    Location,
+    Chromosome,
     Gene,
     Microindel_has_ClinicalSignificance,
     ClinicalSignificance,Disease,
@@ -27,8 +27,8 @@
     WHERE 
     Microindel.idMicroindel=Microindel_has_Disease.Microindel_idMicroindel AND 
     Microindel_has_Disease.Disease_idDisease=Disease.idDisease AND 
-    Microindel.idMicroindel=Location.Microindel_idMicroindel AND 
-    Location.idLocation=Gene.Location_idLocation AND  
+    Microindel.Gene_idGene=Gene.idGene AND 
+    Microindel.Chromosome_idChromosome=Chromosome.idChromosome AND  
     Microindel.idMicroindel=Microindel_has_ClinicalSignificance.Microindel_idMicroindel AND 
     Microindel_has_ClinicalSignificance.ClinicalSignificance_idClinicalSignificance=ClinicalSignificance.idClinicalSignificance AND 
     Microindel.idMicroindel=Microindel_has_Reference.Microindel_idMicroindel AND 
