@@ -54,7 +54,7 @@ CREATE TABLE `Disease` (
   `DiseaseName` varchar(45) DEFAULT NULL,
   `idMIM` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`idDisease`),
-  FULLTEXT (`DiseaseName`),
+  FULLTEXT (`DiseaseName`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -248,7 +248,7 @@ CREATE TABLE `Reference` (
   `idReference` int(11) NOT NULL,
   `PMID` text,
   `DB` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`idReference`),
+  PRIMARY KEY (`idReference`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 

@@ -65,34 +65,50 @@
             </form>
       </nav>
       <div>
-        <form action="/advanced_search.php">
-          Microindel ID: 
-          <input type="text" name="VarID">
-          Gene ID: 
-          <input type="text" name="GeneID">
-        </form> 
-        <form action="/advanced_search.php">
-          Location: 
-          <input type="text" name="Loc">
-          Disease name: 
-          <input type="text" name="Disease">
-        </form> 
-        <form action="/advanced_search.php">
-          <input type="checkbox" name="type[]" value="Ins"> Insertion    
-          <input type="checkbox" name="type[]" value="Del"> Deletion   
-          <input type="checkbox" name="type[]" value="Dup"> Duplication  
-          <input type="checkbox" name="type[]" value="Oth"> Others
-        </form> 
-        <form action="/advanced_search.php">
-          <input list="ClinSigs" name="ClinSigs">
-          <datalist id="ClinSigs">
-            <option value="Pathogenic">
-            <option value="Benign">
-            <option value="Likely Benign">
-            <option value="Likely Pathogenic">
-            <option value="...">
-          </datalist>
-          <input type="submit">
+        <form method="get" action="advanced_search.php" name="advanced">
+          <div class="container" class="form-control" class="form">
+            <label>Name</label><input placeholder="Search by microindel name" class="form-control" type="text" name="microindel_name">
+            <label>Information</label><input placeholder="Search by microindel extra information, like sequence" class="form-control" type="text" name="microindel_info">
+            <label>Start Position</label><input placeholder="Search by microindel start position" class="form-control" type="text" name="start">
+            <label>End</label><input placeholder="Search by microindel end position" class="form-control" type="text" name="end">
+          </div>
+          <div class="container" class="form-control" class="form">
+            <label>Gene</label><input placeholder="Search by gene name" class="form-control" type="text" name="gene">
+          </div>
+          <div class="container" class="form-control" class="form">
+            <label>Ensmbl ID</label><input placeholder="Search by Ensmbl ID" class="form-control" type="text" name="ensmblID">
+          </div>
+          <div class="container" class="form-control" class="form">   
+            <label>Chromosome</label><input placeholder="Search by chromosome location of the microindel" class="form-control" type="text" name="chr">
+            <label>Strand</label><input placeholder="Search by strand of the microindel" class="form-control" type="text" name="strand">
+          </div>
+          <div class="container" class="form-control" class="form">
+            <label>Clinical Significance</label><select class="form-control" name="clinsig">
+              <option value="%">Any</option>
+              <option value="not_provided">Not provided</option>
+              <option value="benign">Benign</option>
+              <option value="likely_benign">Likely Benign</option>
+              <option value="association">Association</option>
+              <option value="sensitivity">Confers Sensitivity</option>
+              <option value="drug_res">Drug Response</option>
+              <option value="protective">Protective</option>
+              <option value="risk">Risk Factor</option>
+              <option value="likely_pathogenic">Likely Pathogenic</option>
+              <option value="pathogenic">Pathogenic</option>
+              <option value="uncertain">Uncertain Significance</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="container" class="form-control" class="form">  
+            <label>PMID</label><input placeholder="Search by PubMed ID" class="form-control" type="text" name="PMID">
+          </div>
+          <div class="container" class="form-control" class="form">
+            <label>Disease</label><input placeholder="Search by disease name related to the microindel" class="form-control" type="text" name="disease">
+            <label>IDMIM</label><input placeholder="Search by OMIM ID of the disease" class="form-control" type="text" name="IDMIM">
+          </div>
+          <div class="container">
+            <button type="submit" class="button2">Submit</button><!-- mateixa class que sing in i sign up-->
+          </div>
         </form>
       </div>
       <script>

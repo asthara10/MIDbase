@@ -1,95 +1,114 @@
 <?php
-    mysql_connect("localhost", "root", "") or die("Error connecting to database: ".mysql_error());
-    /*
-        localhost - it's location of the mysql server, usually localhost
-        root - your username
-        third is your password   
-        if connection fails it will stop loading the page and display an error
-    */   
-    mysql_select_db("miod") or die(mysql_error());
-    /* miod is the name of database we've created */     
-?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <title> Advanced Search</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link rel="stylesheet" type="text/css" href="MIODstyle.css"/>
-</head>
-<body>
-<?php
-    $VarID = "";
-    $GeneID = "";
-    $Loc = "";
-    $Disease = "";
-    $checkbox = "";
-    $clinsig = ";"
-    $advanced_search = "";
 
-    $querycondition = "";
-    if (!empty($_GET["Search"])) {
-        $advanced_search = $_GET["advanced_search"];
-        foreach ($$_GET["search"] as $key => $value) {
-            if(!empty($value)){
-                $querycases = array("VarID","GeneID","Loc","Disease","checkbox","clinsig");
-                if(in_array($key, $querycases)) {
-                    if(!empty($queryCondition)) {
-                        $queryCondition .= " AND ";
-                    } else {
-                        $queryCondition .= " WHERE ";
-                    }
-                switch($key) {
-                    case "VarID":
-                        $raw_results = mysql_query("SELECT * FROM Microindel
-                        WHERE (`Name` LIKE '%".$query."%')") or die(mysql_error());
-                        if(mysql_num_rows($raw_results) > 0){ // if one or more rows are returned do following
-                        while($results = mysql_fetch_array($raw_results)){
-                        // $results = mysql_fetch_array($raw_results) puts data from database into array, while it's valid it does the loop
-                        echo "<p><h3>".$results['Name']."</h3>".$results['Info']."</p>";
-                            }
-                        }
-                        break;
-                    case "GeneID":
-                        $raw_results = mysql_query("SELECT * FROM Gene
-                        WHERE (`Name` LIKE '%".$query."%')") or die(mysql_error());
-                        if(mysql_num_rows($raw_results) > 0){ // if one or more rows are returned do following
-                        while($results = mysql_fetch_array($raw_results)){
-                        // $results = mysql_fetch_array($raw_results) puts data from database into array, while it's valid it does the loop
-                        echo "<p><h3>".$results['Name']."</h3>".$results['Info']."</p>";
-                            }
-                        }
-                        break;
-                    case "Loc":
-                        $raw_results = mysql_query("SELECT * FROM Location
-                        WHERE (`Name` LIKE '%".$query."%')") or die(mysql_error());
-                        if(mysql_num_rows($raw_results) > 0){ // if one or more rows are returned do following
-                            while($results = mysql_fetch_array($raw_results)){
-                        // $results = mysql_fetch_array($raw_results) puts data from database into array, while it's valid it does the loop
-                                 echo "<p><h3>".$results['Name']."</h3>".$results['Info']."</p>";
-                             }
-                         }
-                        break;
-                    case "Disease":
-                        $raw_results = mysql_query("SELECT * FROM Disease
-                        WHERE (`Name` LIKE '%".$query."%')") or die(mysql_error());
-                        if(mysql_num_rows($raw_results) > 0){ // if one or more rows are returned do following
-                            while($results = mysql_fetch_array($raw_results)){
-                        // $results = mysql_fetch_array($raw_results) puts data from database into array, while it's valid it does the loop
-                            echo "<p><h3>".$results['Name']."</h3>".$results['Info']."</p>";
-                             }
-                         }
-                        break;
-                    case "checkbox":
-                        $raw_results=mysql_query(SELECT * FROM `NOM TAULA?` WHERE `Ins` LIKE '%.$type.%' OR `Del` LIKE '%.$type.%' OR `Dup` LIKE '%.$type.%' OR `Oth` LIKE '%.$type.%');//Query stub
-                        echo "raw_results"
-                        break;
-                    case "clinsig":
-                        $clinsig = $_GET["search"]["clinsig"];
-                        echo "clinsig"
-                        break;
+// Connecting to the server
+$servername = "localhost"; //use the servername
+$username = "root"; //use our username
+$password = "1994"; //use our password
+$database = "miod";
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $database);
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+// Initializing all variables
+$microindel_name = '%';
+$microindel_info = '%';
+$start = '%';
+$end = '%';
+
+$gene = '%';
+$ensmblID = '%';
+
+$chr = '%';
+$strand = '%';
+
+$clinsig = '%';
+
+$PMID = '%';
+
+$disease = '%';
+$IDMIM = '%';  
+
+$idmicroindel = '%';
+$iddisease = '%';
+$idreference = '%';
+$idgene = '%';
+$idchromosome = '%';
+$idclinsig = '%';
+
+// Importing all searching data from the form
+if (!empty($_REQUEST["microindel_name"])) {
+    $microindel_name = $_REQUEST["microindel_name"];
+}
+if (!empty($_REQUEST["microindel_info"])) {
+    $microindel_info = $_REQUEST["microindel_info"];
+}
+if (!empty($_REQUEST["start"])) {
+    $start = $_REQUEST["start"];
+}
+if (!empty($_REQUEST["end"])) {
+    $end = $_REQUEST["end"];
+}
+if (!empty($_REQUEST["gene"])) {
+    $gene = $_REQUEST["gene"];
+}
+if (!empty($_REQUEST["ensmblID"])) {
+    $ensmblID = $_REQUEST["ensmblID"];
+}
+if (!empty($_REQUEST["chr"])) {
+    $chr = $_REQUEST["chr"];
+}
+if (!empty($_REQUEST["strand"])) {
+    $strand = $_REQUEST["strand"];
+}
+if (!empty($_REQUEST["clinsig"])) {
+    $clinsig = $_REQUEST["clinsig"];
+}
+if (!empty($_REQUEST["PMID"])) {
+    $PMID = $_REQUEST["PMID"];
+}
+if (!empty($_REQUEST["disease"])) {
+    $disease = $_REQUEST["disease"];
+}
+if (!empty($_REQUEST["IDMIM"])) {
+    $IDMIM = $_REQUEST["IDMIM"];
+}
+
+// Select ids for all tables where a field is being required in the search
+$req_microindel = "SELECT idMicroindel FROM Microindel WHERE (Name LIKE %".$microindel_name."%) AND (Start LIKE %".$start."%) AND (End LIKE %".$end."%) AND (Info LIKE %".$microindel_info."%)";
+$req_disease = "SELECT idDisease FROM Disease WHERE (DiseaseName LIKE %".$disease."%) AND (idMIM LIKE %".$IDMIM."%)";
+$req_reference = "SELECT idReference FROM Reference WHERE PMID LIKE %".$PMID."%";
+$req_gene = "SELECT idGene FROM Gene WHERE (GeneName LIKE %".$gene."$) AND (idENSEMBL LIKE %".$ensmblID."%)";
+$req_chromosome = "SELECT idChromosome FROM Chromosome WHERE (Chromosome LIKE %".$chr."$) AND (Strand LIKE %".$strand."$)";
+$req_clinsig = "SELECT idClinicalSignificance FROM ClinicalSignificance WHERE Value = ".$clinsig;
+
+$idmicroindel = mysqli_query($conn, $req_microindel);
+$iddisease = mysqli_query($conn, $req_disease);
+$idreference = mysqli_query($conn, $req_reference);
+$idgene = mysqli_query($conn, $req_gene);
+$idchromosome = mysqli_query($conn, $req_chromosome);
+$idclinsig = mysqli_query($conn, $req_clinsig);
+
+// Final selecting of all fields
+foreach ($idmicroindel as $idmic) {
+    foreach ($iddisease as $iddis) {
+        foreach ($idreference as $idref) {
+            foreach ($idgene as $idgen) {
+                foreach ($idchromosome as $idchr) {
+                    foreach ($idclinsig as $idclin) {
+                        $request = "SELECT Microindel.Name, ClinicalSignificance.Value, Disease.DiseaseName, Reference.PMID FROM Microindel, ClinicalSignificance, Disease, Reference WHERE Microindel.idMicroindel = Microindel_has_Disease.Microindel_idMicroindel AND Disease.idDisease = Microindel_has_Disease.Disease_idDisease AND Microindel.idMicroindel = $idmic AND Disease.idDisease = $iddis AND Microindel.Gene_idGene = $idgen AND Microindel.Chromosome_idChromosome = $idchr AND Microindel.idMicroindel = Microindel_has_ClinicalSignificance.Microindel_idMicroindel AND ClinicalSignificance.idClinicalSignificance = Microindel_has_ClinicalSignificance.ClinicalSignificance_idClinivalSignificance AND ClinicalSignificance.idClinicalSignificance = $idclin AND Microindel.idMicroindel = Microindel_has_Reference.Microindel_idMicroindel AND Reference.idReference = Microindel_has_Reference.Reference_idReference AND Reference.idReference = $idref";
+                        $hit = mysqli_query($conn, $request);
+                        echo $hit;
                     }
                 }
             }
         }
     }
+}
+
+
+
 ?>
+
