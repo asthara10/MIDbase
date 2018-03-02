@@ -9,12 +9,11 @@
     //Removes withespaces at the beggining and ending of chain
 
     if (!$query) {
-        print($_SERVER['HTTP_REFERER']);
         header('Location:'.$_SERVER['HTTP_REFERER']);
+        $empty = False;
     }
     //return to origin webpage if query is empty
 
-	
     $query = htmlspecialchars($query); 
     // changes characters used in html to their equivalents, for example: < to &gt;
          
@@ -42,6 +41,11 @@
         $counter++;
     }
     //A weird way for obtaining the number of hits
+
+    if (empty($results) and $empty !== False){
+        header('Location: noresults.html');
+    }
+    //Go to noresults.html (still not done) if no result is found and query is not empty
 
     print(file_get_contents("./patró.html"));
     //import common header from patró   
