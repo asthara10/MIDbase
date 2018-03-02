@@ -17,13 +17,22 @@
             // makes sure nobody uses SQL injection
 
             $table_field = explode('_',$tablefield);
+            $field = $table_field[0].".".$table_field[1];
             //The name of the input is the table.field corresponding. Split them by _ and create sql query
-            $ANDconds[] = " " . $table_field[0] . "." . $table_field[1] . " LIKE '%" . $query . "%' ";
+
+            if (in_array($field, $textFields)){
+                $ANDconds[] = " " . $table_field[0] . "." . $table_field[1] . " LIKE '%" . $query . "%' ";
+            }
+            else{
+                $ANDconds[] = " " . $table_field[0] . "." . $table_field[1] . " LIKE '" . $query . "' ";
+            }
+            //Regex-like searches only allowed in microindel name, disease name and gene name. All others are precise searches
+            //I mean, if I search for chromosome 1, I only want results in chromosome 1 not in 1,10,11,12 and so on.
         }
     }
 
     if ($empty == True) {
-        header('Location: search.html');
+        header('Location: ./search.html');
     }
     //return to origin webpage if query is empty
 
@@ -37,8 +46,13 @@
     }
     // if one or more rows are returned do following
 
-    if (empty($results) and $empty !== False){
-        header('Location: noresults.html');
+    if ( empty($raw_results) and $empty !== False){
+        print("2");
+        header('Location: ./noresults.html');
+    }
+
+    if ($raw_results){
+        var_dump($results);
     }
     //Go to noresults.html (still not done) if no result is found and query is not empty
 

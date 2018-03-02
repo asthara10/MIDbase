@@ -187,3 +187,10 @@ span.psw {
   border: solid gray 1px;
   background-color: #eeeeef;
 }
+
+/*For the no results page*/
+.noresults {
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 5%;
+}
