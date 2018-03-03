@@ -11,48 +11,17 @@
     <link rel="stylesheet" type="text/css" href="MIOD_styles.css"> <!--My style sheet-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!--Import header from patró.html-->
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script> 
+    $(function(){
+      $("#header").load("patró.html"); 
+    });
+    </script> 
   </head>
   
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#"></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="##navbarToggleExternalContent" aria-controls="#navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-item nav-link active" href="MIOD.html">Home <span class="sr-only">(current)</span></a>
-          <a class="nav-item nav-link" href="search.html">Advanced Search</a>
-          <a class="nav-item nav-link" href="MIODform.html">Introduce Data</a>
-          <a class="nav-item nav-link" href="Contact.html">Contact Us</a>
-          <a class="nav-item nav-link" href="about.html">About Us</a>
-        </div>
-        <form class="form-inline">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-            <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="button">Login</button>
-            <div id="id01" class="modal">
-                <form class="modal-content animate" action="/login.php">
-                  <div class="container">
-                   <form>
-                      User name:<br>
-                      <input type="text" name="username"><br>
-                      User password:<br>
-                      <input type="password" name="psw" size = "15"><br>
-                    </form>  
-                    <button type="submit" class="button3">Login</button>
-                    <label>
-                    <input type="checkbox" checked="checked"> Remember me</label>
-                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-                    <span class="psw"><a href="#"> Forgot password?</a></span>
-                  </div>
-                </form>
-              </div>
-             <form action="signup.html">
-              <input type="button" value="SignUp" class="button">
-            </form>
-      </nav>
+    <div id="header"></div>
     <div class="columns">
       <div class="first">
         <h3> MIOD's purpose</h3>
