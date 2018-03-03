@@ -1,23 +1,24 @@
 .columns {
   overflow:hidden;
   justify-content: center;
+  text-align: justify;
 
 }
 .first {
-  width:50%;
+  width:45%;
   float:left;
-  margin:auto;
+  margin:15px;
   overflow: hidden;
   display: inline-block;
   justify-content: center;
 
 }
 .second {
-  width:50%;
+  width:45%;
   float:left;
   overflow: hidden;
   vertical-align: middle;
-  margin: auto;
+  margin: 15px;
 }
 
 
@@ -193,4 +194,10 @@ span.psw {
   margin: 0 auto;
   text-align: center;
   margin-top: 5%;
+}
+
+.text{
+  margin:15px;
+  text-align: justify;
+  margin: 15px;
 }
