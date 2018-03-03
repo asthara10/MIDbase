@@ -10,7 +10,7 @@
 
     if (!$query) {
         header('Location:'.$_SERVER['HTTP_REFERER']);
-        $empty = False;
+        $empty = True;
     }
     //return to origin webpage if query is empty
 
@@ -42,7 +42,7 @@
     }
     //A weird way for obtaining the number of hits
 
-    if (empty($results) and $empty !== False){
+    if (empty($results) and $empty !== True){
         header('Location: noresults.html');
     }
     //Go to noresults.html (still not done) if no result is found and query is not empty

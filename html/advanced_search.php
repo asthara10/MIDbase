@@ -46,8 +46,7 @@
     }
     // if one or more rows are returned do following
 
-    if ( empty($raw_results) and $empty !== False){
-        print("2");
+    if ( !$results and $empty == False){
         header('Location: ./noresults.html');
     }
 
