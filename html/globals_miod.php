@@ -44,18 +44,18 @@
     //To store querys
 
     $miodfile = array(
-        'Microindel.Name',
-        'Microindel.Start',
-        'Microindel.End',
-        'Chromosome.Chromosome',
-        'Chromosome.Strand',
-        'Gene.Name',
-        'Gene.idENSEMBL',
-        'Disease.DisaseName',
-        'Disase.idMIM',
-        'Clinical_Significance.Value',
-        'Reference.PMID',
-        'Microindel.Info', 
+        'MicroindelName',
+        'Start',
+        'End',
+        'Chromosome',
+        'Strand',
+        'GeneName',
+        'idENSEMBL',
+        'DiseaseName',
+        'idMIM',
+        'Value',
+        'PMID',
+        'Info', 
     );
     //Miod annotations structure. Each field is in the position it belongs in the miod file
 ?>
