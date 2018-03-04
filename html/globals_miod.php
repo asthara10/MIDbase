@@ -42,4 +42,20 @@
 
     session_start();
     //To store querys
+
+    $miodfile = array(
+        'Microindel.Name',
+        'Microindel.Start',
+        'Microindel.End',
+        'Chromosome.Chromosome',
+        'Chromosome.Strand',
+        'Gene.Name',
+        'Gene.idENSEMBL',
+        'Disease.DisaseName',
+        'Disase.idMIM',
+        'Clinical_Significance.Value',
+        'Reference.PMID',
+        'Microindel.Info', 
+    );
+    //Miod annotations structure. Each field is in the position it belongs in the miod file
 ?>

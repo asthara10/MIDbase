@@ -1,0 +1,30 @@
+#In this template, we show you the format to use when uploading micorindels from a file.
+#All lines beggining with "#"" will be skipped
+#All fields have to be separated by tabs
+#If you cannot fill one of the fields, please add a "-"
+
+#Avalible clinical significances: 
+##benign
+##likely_benign
+##association
+##sensitivity
+##drug_res
+##protective
+##risk
+##likely_pathogenic
+##pathogenic
+##uncertain
+##other
+
+#Avalible chromosome values: 1-22,X and Y
+#Avalible strand values: "+" and "-"
+
+#Header:
+#Micorindel_name	Genome_coordinate_Start	Genome_coordinate_end	Chromosome	Strand(+/-)	Gene_name	Gene_ENSEML_id	Disease(separated_by_","")	MIM_disease_code(separated_by_","")	Clinical_Significance(choose_from_list)	Reference_PMID	Information(alleles)
+
+rs1160946	76086641	76086640	5	+	Gene_name	ENSG00000122012	Disease1,disease2	114480,114481	pathogenic	23193287	-/GGTA/GG
+rs361622	19971168	19971167	22	+	Gene_name	LRG_1010	Disease1,disease2	114480,114481	pathogenic	23193287	-/C
+rs1160961	36860949	36860948	5	+	Gene_name	ENSG00000272103	Disease1,disease2	114480,114481	pathogenic	23193287	-/TT
+rs1160948	141641287	141641286	5	-	Gene_name	ENSG00000164620	Disease1,disease2	114480,114481	pathogenic	23193287	-/AGT
+rs1160962	96991846	96991845	5	-	Gene_name	ENSG00000113441	Disease1,disease2	114480,114481	pathogenic	23193287	-/TT
+rs361839	20369563	20369562	22	-	Gene_name	ENSG00000161133	Disease1,disease2	114480,114481	pathogenic	23193287	-/GCAGTC
