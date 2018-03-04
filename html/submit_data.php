@@ -3,7 +3,7 @@
 // Connecting to the server
 $servername = "localhost"; //use the servername
 $username = "root"; //use our username
-$password = "1994"; //use our password
+$password = ""; //use our password
 $database = "miod";
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $database);
@@ -16,6 +16,8 @@ if (!$conn) {
 // Initializing all variables to NULL
 $microindel_id = 0;
 $microindel_name = "";
+$micoindel_start = NULL;
+$microindel_end = NULL;
 $microindel_info = NULL;
 
 $gene_id = [];
@@ -71,6 +73,12 @@ if (!empty($_REQUEST["microindel_name"])) {
 
 	if(!empty($_REQUEST["microindel_info"])){
 		$microindel_info = $_REQUEST["microindel_info"];
+	}
+	if(!empty($_REQUEST["microindel_start"])){
+		$microindel_info = $_REQUEST["microindel_start"];
+	}
+	if(!empty($_REQUEST["microindel_end"])){
+		$microindel_info = $_REQUEST["microindel_end"];
 	}
 
 	//Clinical Significance Management
@@ -201,49 +209,45 @@ if (!empty($_REQUEST["microindel_name"])) {
 	}
 
 	//Location Managment
-	if (!empty($_REQUEST["start"])) {
-		if ((empty($_REQUEST["end"])) or (empty($_REQUEST["chr"])) or (empty($_REQUEST["strand"]))) {
-			echo '<script type="text/javascript">
-			alert("All location fields are required in order to add a location");
-			</script>';
-		}
-		else {
-			$tempstart = $_REQUEST["start"];
-			$tempend = $_REQUEST["end"];
-			$tempchr = $_REQUEST["chr"];
-			$tempstrand = $_REQUEST["strand"];
+	if (empty($_REQUEST["chr"]) or (empty($_REQUEST["strand"]))) {
+		echo '<script type="text/javascript">
+		alert("All location fields are required in order to add a location");
+		</script>';
+	}
+	else {
+		$tempchr = $_REQUEST["chr"];
+		$tempstrand = $_REQUEST["strand"];
 
-			$request = "SELECT idLocation FROM Location WHERE StartGRCh38='$tempstart' AND EndGRCh38='$tempend' AND CythogeneticLocation='$tempchr' AND Strand='$tempstrand';";
-			$check_exist = mysqli_query($conn, $request);
-			$no_exist = empty(mysqli_num_rows($check_exist));
+		$request = "SELECT idLocation FROM Location WHERE Chromosome='$tempchr' AND Strand='$tempstrand';";
+		$check_exist = mysqli_query($conn, $request);
+		$no_exist = empty(mysqli_num_rows($check_exist));
 
-			if($no_exist){
-				$queryActuaId = "SELECT MAX(idLocation) FROM Location;";
-				$result = mysqli_query($conn, $queryActuaId);
-				$actual_id = 0;
-				if (!empty($result)) {
-					if (mysqli_num_rows($result) > 0) {
-						$row = mysqli_fetch_assoc($result);
-						$actual_id = $row["MAX(idLocation)"];
-					} else {
-						$actual_id = 0;
-					}
+		if($no_exist){
+			$queryActuaId = "SELECT MAX(idLocation) FROM Location;";
+			$result = mysqli_query($conn, $queryActuaId);
+			$actual_id = 0;
+			if (!empty($result)) {
+				if (mysqli_num_rows($result) > 0) {
+					$row = mysqli_fetch_assoc($result);
+					$actual_id = $row["MAX(idLocation)"];
 				} else {
 					$actual_id = 0;
 				}
-				$location_id = $actual_id+1;		
+			} else {
+				$actual_id = 0;
 			}
-			else {
-				$queryId = "SELECT idLocation FROM Location WHERE StartGRCh38='$tempstart' AND EndGRCh38='$tempend' AND CythogeneticLocation='$tempchr' AND Strand='$tempstrand';";
-				$result = mysqli_query($conn, $queryId);
-				if (mysqli_num_rows($result) > 0) {
-					$row = mysqli_fetch_assoc($result);
-					$location_id = $row["idLocation"];
-					echo '<script type="text/javascript">
-					alert('.$location_id.');
-					</script>';	
-				} 
-			}
+			$location_id = $actual_id+1;		
+		}
+		else {
+			$queryId = "SELECT idLocation FROM Location WHERE Chromosome='$tempchr' AND Strand='$tempstrand';";
+			$result = mysqli_query($conn, $queryId);
+			if (mysqli_num_rows($result) > 0) {
+				$row = mysqli_fetch_assoc($result);
+				$location_id = $row["idLocation"];
+				echo '<script type="text/javascript">
+				alert('.$location_id.');
+				</script>';	
+			} 
 		}
 	}
 
@@ -281,7 +285,8 @@ if (!empty($_REQUEST["microindel_name"])) {
 					$gen_id = $row["idGene"];
 				} 
 			}
-			$sqlgene = "INSERT INTO Gene (idGene, GeneName, idENSEMBL, Location_idLocation) VALUES ('$gen_id','$gene', '$EnsID[$i]', '$location_id');";
+			$sqlgene = "INSERT INTO Gene (idGene, GeneName, idENSEMBL) VALUES ('$gen_id','$gene', '$EnsID[$i]');";
+			$genids[] = $gen_id;
 			if (!mysqli_query($conn, $sqlgene)) {
 				$all_correct = false;
 				echo "Error: " . $sqlgene . "<br>" . mysqli_error($conn);	
@@ -293,10 +298,12 @@ if (!empty($_REQUEST["microindel_name"])) {
 	$all_correct = true;
 
 	// Inserting Data
-	$sqlmicro = "INSERT INTO Microindel (idMicroindel, Info, Name) VALUES ('$microindel_id', '$microindel_info', '$microindel_name');";
-	if (!mysqli_query($conn, $sqlmicro)) {
-		$all_correct = false;
-		echo "Error: " . $sqlmicro . "<br>" . mysqli_error($conn);	
+	foreach ($genids as $genid) {
+		$sqlmicro = "INSERT INTO Microindel (idMicroindel, Info, Name, Gene_idGene, Chromosome_idChromosome) VALUES ('$microindel_id', '$microindel_info', '$microindel_name', $genid, '$location_id');";
+		if (!mysqli_query($conn, $sqlmicro)) {
+			$all_correct = false;
+			echo "Error: " . $sqlmicro . "<br>" . mysqli_error($conn);	
+		}
 	}
 
 
@@ -314,7 +321,7 @@ if (!empty($_REQUEST["microindel_name"])) {
 		}
 	}
 
-	$sqlloc = "INSERT INTO Location (idLocation, StartGRCh38, EndGRCh38, CythogeneticLocation, Strand, Microindel_idMicroindel) VALUES ('$location_id','$tempstart', '$tempend', '$tempchr', '$tempstrand', '$microindel_id');";
+	$sqlloc = "INSERT INTO Location (idLocation, Chromosome, Strand) VALUES ('$location_id', '$tempchr', '$tempstrand');";
 	if (!mysqli_query($conn, $sqlloc)) {
 		$all_correct = false;
 		echo "Error: " . $sqlloc . "<br>" . mysqli_error($conn);	

@@ -27,6 +27,8 @@
     <form method="post" action="submit_data.php" name="input">
       <div class="container" class="form-control" class="form">
         <label>Microindel Name</label><input placeholder="Microindel name" class="form-control" type="text" name="microindel_name" required>
+        <label>Microindel Start</label><input placeholder="Microindel start position" class="form-control" type="text" name="microindel_start">
+        <label>Microindel End</label><input placeholder="Microindel end position" class="form-control" type="text" name="microindel_end">
         <label>Microindel Information</label><input placeholder="Microindel extra information" class="form-control" type="text" name="microindel_info">
       </div>
       <div class="container" class="form-control" class="form" id="dynamicGene">
@@ -35,8 +37,6 @@
       </div>
       <input type="button" value="Add gene" onClick="addFields('dynamicGene');">
       <div class="container" class="form-control" class="form">   
-        <label>Start Positon</label><input placeholder="start position of the microindel" class="form-control" type="text" name="start">
-        <label>End Positon</label><input placeholder="end position of the microindel" class="form-control" type="text" name="end">
         <label>Chromosome</label><input placeholder="chromosome location of the microindel" class="form-control" type="text" name="chr">
         <label>Strand</label><input placeholder="strand of the microindel" class="form-control" type="text" name="strand">
       </div>
