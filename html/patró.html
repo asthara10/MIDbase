@@ -44,13 +44,13 @@
           </form>
             <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="button">Login</button>
             <div id="id01" class="modal">
-                <form class="modal-content animate" action="/login.php">
+                <form class="modal-content animate" action="login.php" method="post"">
                   <div class="container">
                    <form>
                       User name:<br>
-                      <input type="text" name="username"><br>
+                      <input type="text" name="uname" required ><br>
                       User password:<br>
-                      <input type="password" name="psw" size = "15"><br>
+                      <input type="password" name="psw" size ="15" required ><br>
                     </form>  
                     <button type="submit" class="button3">Login</button>
                     <label>
@@ -60,10 +60,28 @@
                   </div>
                 </form>
               </div>
-             <form action="signup.html">
-              <input type="button" value="SignUp" class="button">
-            </form>
-      </nav>
+            <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;" class="button">Sign Up</button>
+            <div id="id02" class="modal">
+              <form class="modal-content animate" action="signup.php" method="post">
+                <div class="container">
+                  <form>
+                      User name:<br>
+                      <input type="text" name="uname" required ><br>
+                      Email:<br>
+                      <input type="email" name="email" size ="15" required ><br>
+                      Password:<br>
+                      <input type="password" name="password_1" size ="15" required ><br>
+                      Confirm password:<br>
+                      <input type="password" name="password_2" size ="15" required ><br>
+                  </form>  
+                    <button type="submit" class="button3" name="reg_user">Register</button>
+                    <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+                    <p>
+                      Already a member? <a href="login.html">Sign in</a>
+                    </p>
+                </div>
+              </form>
+            </nav>
 
   </body>
 </html>
