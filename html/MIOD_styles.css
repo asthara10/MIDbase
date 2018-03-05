@@ -207,3 +207,8 @@ span.psw {
   text-align: justify;
   margin: 15px;
 }
+
+/*For the emergin window in login and sign up*/
+.popup {
+  width: 40%;
+}
