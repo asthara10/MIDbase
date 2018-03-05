@@ -266,10 +266,7 @@ INSERT INTO `Reference` VALUES (1,'-','dbSNP'),(2,'26837816','dbSNP'),(3,'244161
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
-/* Create a user with only SELECT, UPDATE and INSERT privileges. */
-CREATE USER 'sec_user'@'localhost' IDENTIFIED WITH mysql_native_password AS 'nHgT6Kaw24';
-GRANT SELECT, INSERT, UPDATE ON miod_login.* TO 'sec_user'@'localhost';
-
+DROP TABLE IF EXISTS `members`;
 /* Create a the members table */
 CREATE TABLE miod.members (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,

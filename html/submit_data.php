@@ -1,29 +1,16 @@
-<html>
-  <head>
-    <title>Contact Us</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="MIOD_styles.css">
-    <!--Import header from patró.html-->
-    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-    <script> 
-    $(function(){
-      $("#header").load("Public_html/patro.html"); 
-    });
-    </script> 
-  </head>
-  <body>
-      <div id="header"></div>
-      <div class="container">
 
 <?php
 
 //Include globals
 include "globals_miod.php";
+
+//initialize all correct true variable
+$all_correct = true;
+
+//Return to main page if all is empty
+if (empty($_REQUEST)) {
+    header('Location:'.$_SERVER['HTTP_REFERER']);
+}
 
 //Work with file
 if ($_REQUEST["miodfile"]){
@@ -32,7 +19,6 @@ if ($_REQUEST["miodfile"]){
 	$lines = explode("\n", $infile);
 	//iterating by line
 	foreach ($lines as $line) {
-
 		########
 		##Preprocessing annotation
 		########
@@ -47,17 +33,19 @@ if ($_REQUEST["miodfile"]){
 		//Checking number of fields
 		if ($field_num !== 12){
 			echo '<script type="text/javascript">
-			alert("Error: wrong number of fields");
+			alert("Error: wrong number of fields in line beggining wiht'.$sepline[0].'. Skipping...");
 			</script>';
-			exit("<p>Error: wrong number of fields</p>");
+			$all_correct = False;
+			continue;
 		}
 
 		//Creating as variables as elements in global array miodfile (each element is a field) Now the elements have the name of the fields. Also checking for empty fields
 		for ($i=0; $i < $field_num; $i++) {
 			if (!$sepline[$i]){
 				echo '<script type="text/javascript">
-				alert("Error: ".$miodfile[$i]." field in ".$sepline[0]." is empty. Please, fill with \"-\" if information is not avalible. Skipping...");
+				alert("Error: "'.$miodfile[$i]." field in ".$sepline[0].' is empty. Please, fill with "-" if information is not avalible. Skipping...);
 				</script>';
+				$all_correct = False;
 				continue 2;
 			}
 			$tocode = "$".$miodfile[$i]."=\"".$sepline[$i]."\";";
@@ -74,8 +62,9 @@ if ($_REQUEST["miodfile"]){
 		$exists = mysqli_fetch_array($raw_sql)['Name'];
 		if($exists){
 			echo '<script type="text/javascript">
-			alert("Microindel ".$MicroindelName." already exists. Skipping...");
+			alert("Microindel '.$MicroindelName.' already exists. Skipping...");
 			</script>';
+			$all_correct = False;
 			continue;
 		}
 		//New microindel id (the last plus one)
@@ -91,8 +80,9 @@ if ($_REQUEST["miodfile"]){
 		$idchrom = mysqli_fetch_array($raw_sql)['idChromosome'];
 		if(!$idchrom){
 			echo '<script type="text/javascript">
-			alert("Wrong strand/chromosome in ".$MicroindelName.". Skipping...");
+			alert("Wrong strand/chromosome in '.$MicroindelName.' . Skipping...");
 			</script>';
+			$all_correct = False;
 			continue;
 		}
 
@@ -102,8 +92,9 @@ if ($_REQUEST["miodfile"]){
 		$idclinsig = mysqli_fetch_array($raw_sql)['idClinicalSignificance'];
 		if(!$idclinsig){
 			echo '<script type="text/javascript">
-			alert("Wrong Clinical significance in ".$MicroindelName.". Skipping...");
+			alert("Wrong Clinical significance in '.$MicroindelName.'. Skipping...");
 			</script>';
+			$all_correct = False;
 			continue;
 		}
 
@@ -137,7 +128,6 @@ if ($_REQUEST["miodfile"]){
 				$diseases_existed[$i] = False;
 				$raw_sql = mysqli_query($id,'SELECT MAX(idDisease) FROM Disease;');
 				$newid = mysqli_fetch_array($raw_sql)['MAX(idDisease)'] + 1 + $diseasecounter;
-				print($newid);
 				$iddiseases[$i] = $newid;
 				$diseasecounter++;
 			}
@@ -171,7 +161,6 @@ if ($_REQUEST["miodfile"]){
 		//2. Gene
 		if (!$gene_existed){
 			$sqlins = mysqli_query($id, "INSERT INTO Gene (idGene, GeneName, idENSEMBL) VALUES ('$idgene', '$GeneName', '$idENSEMBL');");
-			print("INSERT INTO Gene (idGene, GeneName, idENSEMBL) VALUES ('$idgene', '$GeneName', '$idENSEMBL');");
 		}
 		
 		//3. Reference
@@ -257,7 +246,9 @@ else{
 		} else { //microindel already exists
 			echo '<script type="text/javascript">
 				alert("The microindel already exists");
-			</script>';	
+			</script>';
+			$all_correct = False;
+
 		} 
 
 		if(!empty($_REQUEST["microindel_info"])){
@@ -402,6 +393,7 @@ else{
 			echo '<script type="text/javascript">
 			alert("All location fields are required in order to add a location");
 			</script>';
+			$all_correct = False;
 		}
 		else {
 			$tempchr = $_REQUEST["chr"];
@@ -481,8 +473,6 @@ else{
 			$i++;
 		}
 
-		$all_correct = true;
-
 		// Inserting Data
 		foreach ($genids as $genid) {
 			$sqlmicro = "INSERT INTO Microindel (idMicroindel, Info, Name, Gene_idGene, Chromosome_idChromosome) VALUES ('$microindel_id', '$microindel_info', '$microindel_name', $genid, '$location_id');";
@@ -515,19 +505,24 @@ else{
 			}
 		}
 		
-		if ($all_correct) {
-	    	echo "New records created successfully";
-		} 
 	}
 	else {
 		echo '<script type="text/javascript">
 		alert("The microindel name is required");
-		</script>';	
+		</script>';
+		$all_correct = False;
 	}
 }
+
 mysqli_close($id);
 
-?>
+if ($all_correct) {
+	echo '<script type="text/javascript">
+alert("All Microindels annotated successfully");
+</script>';	
+} 
 
-	</div>
-</body>
+//Go to original page after alerts
+echo '<script>window.location="MIODform.html"</script>';
+
+?>
