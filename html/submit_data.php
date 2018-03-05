@@ -15,11 +15,10 @@
       $("#header").load("patró.html"); 
     });
     </script> 
-
   </head>
   <body>
       <div id="header"></div>
-      <div class="container" class="contact" >
+      <div class="container">
 
 <?php
 
@@ -522,3 +521,6 @@ else{
 mysqli_close($id);
 
 ?>
+
+	</div>
+</body>
