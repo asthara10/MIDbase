@@ -43,11 +43,11 @@
     //A weird way for obtaining the number of hits
 
     if (empty($results) and $empty !== True){
-        header('Location: noresults.html');
+        header('Location: Public_html/noresults.html');
     }
     //Go to noresults.html (still not done) if no result is found and query is not empty
 
-    print(file_get_contents("./patró.html"));
+    print(file_get_contents("./Public_html/patro.html"));
     //import common header from patró   
 ?> 
 
@@ -55,7 +55,7 @@
 <head>
     <title>Search</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link rel="stylesheet" type="text/css" href="MIOD_styles.css"/>
+    <link rel="stylesheet" type="text/css" href="Public_html/MIOD_styles.css"/>
     <!--bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <!-- jQuery -->
