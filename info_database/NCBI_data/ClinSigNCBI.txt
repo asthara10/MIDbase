@@ -1,2 +1,0 @@
-ID_ClinSig	Value
-1	Not provided

@@ -1,3 +1,0 @@
-idDisease	DiseaseName	idMIM
-1	-	-
-2	ZELLWEGER SYNDROME	-

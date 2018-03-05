@@ -163,6 +163,22 @@ CREATE TABLE IF NOT EXISTS `miod`.`Microindel_has_Disease` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
+DROP TABLE IF EXISTS `Members`;
+/* Create a the members table */
+CREATE TABLE miod.Members (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(30) NOT NULL,
+    email VARCHAR(50) NOT NULL,
+    password CHAR(128) NOT NULL
+) ENGINE = InnoDB;
+
+DROP TABLE IF EXISTS `Comments`;
+/* Create a the members table */
+CREATE TABLE miod.Comments (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(50) NOT NULL,
+    comment TEXT NOT NULL
+) ENGINE = InnoDB;
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;

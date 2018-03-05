@@ -1,4 +1,0 @@
-#Add your mysql username in the command line after the script
-case 
-mysql -u $1 -p  < miod_db.sql
-

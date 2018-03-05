@@ -1,6 +1,0 @@
-awk 'BEGIN {FS="\t"}; {print($6,"\t",$8" ("$7")","\t",$2"-"$3,"\t",$11,"\t")}' genemap_parsed.txt > OMIM_gene.txt
-awk 'BEGIN {FS="\t"}; {print($6,"\t","name","\t",$12,"\t")}' genemap_parsed.txt > OMIM_microindel.txt
-awk 'BEGIN {FS="\t"}; {print($6,"\t","id_patho","\t")}' genemap_parsed.txt > OMIM_microindel_has_clinicalsignificance.txt
-awk 'BEGIN {FS="\t"}; {print("id_location","\t",$2,"\t",$3,"\t",$4,"\t","NULL","\t",$6,"\t")}' genemap_parsed.txt > OMIM_location.txt
-awk 'BEGIN {FS="\t"}; {print("id_disease","\t",$13,"\t",$6,"\t")}' genemap_parsed.txt > OMIM_disease.txt
-awk 'BEGIN {FS="\t"}; {print($6,"\t","PubMedID","\t","OMIM","\t")}' genemap_parsed.txt > OMIM_references.txt

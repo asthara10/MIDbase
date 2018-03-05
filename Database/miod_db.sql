@@ -81,8 +81,7 @@ CREATE TABLE `Disease` (
   `idDisease` int(11) NOT NULL,
   `DiseaseName` varchar(45) DEFAULT NULL,
   `idMIM` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`idDisease`),
-  FULLTEXT KEY `FullText` (`DiseaseName`)
+  PRIMARY KEY (`idDisease`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -107,8 +106,7 @@ CREATE TABLE `Gene` (
   `idGene` int(11) NOT NULL AUTO_INCREMENT,
   `GeneName` varchar(45) DEFAULT NULL,
   `idENSEMBL` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`idGene`),
-  FULLTEXT KEY `FullText` (`GeneName`)
+  PRIMARY KEY (`idGene`)
 ) ENGINE=InnoDB AUTO_INCREMENT=109 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -140,7 +138,6 @@ CREATE TABLE `Microindel` (
   PRIMARY KEY (`idMicroindel`,`Gene_idGene`,`Chromosome_idChromosome`),
   KEY `fk_Microindel_Gene1_idx` (`Gene_idGene`),
   KEY `fk_Microindel_Chromosome1_idx` (`Chromosome_idChromosome`),
-  FULLTEXT KEY `FullText` (`Name`),
   CONSTRAINT `fk_Microindel_Chromosome1` FOREIGN KEY (`Chromosome_idChromosome`) REFERENCES `Chromosome` (`idChromosome`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_Microindel_Gene1` FOREIGN KEY (`Gene_idGene`) REFERENCES `Gene` (`idGene`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -266,13 +263,21 @@ INSERT INTO `Reference` VALUES (1,'-','dbSNP'),(2,'26837816','dbSNP'),(3,'244161
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
-DROP TABLE IF EXISTS `members`;
+DROP TABLE IF EXISTS `Members`;
 /* Create a the members table */
-CREATE TABLE miod.members (
+CREATE TABLE miod.Members (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(30) NOT NULL,
     email VARCHAR(50) NOT NULL,
     password CHAR(128) NOT NULL
+) ENGINE = InnoDB;
+
+DROP TABLE IF EXISTS `Comments`;
+/* Create a the members table */
+CREATE TABLE miod.Comments (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(50) NOT NULL,
+    comment TEXT NOT NULL
 ) ENGINE = InnoDB;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
