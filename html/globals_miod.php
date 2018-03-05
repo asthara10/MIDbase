@@ -1,5 +1,5 @@
 <?php
-    $id = mysqli_connect("localhost", "admiod", "Microindels4") or die("Error connecting to database: ".mysqli_error());
+    #$id = mysqli_connect("localhost", "admiod", "Microindels4") or die("Error connecting to database: ".mysqli_error());
     /*
         localhost - it's location of the mysql server, usually localhost
         root - your username
@@ -37,11 +37,8 @@
 	/*The first part of any text search. Outputs the selected fields FROM the selected tables WHERE the primary keys and foreign keys 
 	match between them. It's complicate to understnad, ask me if any doubt (By: David)*/
 
-    mysqli_select_db($id, "miod") or die(mysqli_error());
+    #mysqli_select_db($id, "miod") or die(mysqli_error());
     //miod is the name of database we've created  
-
-    session_start();
-    //To store querys
 
     $miodfile = array(
         'MicroindelName',
@@ -63,9 +60,8 @@
     Database login details and connection
     */ 
     define('SERVER', 'localhost');
-    define('USERNAME', 'admiod');
-    define('PASSWORD', 'Microindels4');
-    define('DATABASE', 'miod');
+    define('USERNAME', 'root');
+    define('PASSWORD', 'socunpeix3');
+    define('DATABASE', 'miod_login');
     $db = mysqli_connect(SERVER,USERNAME,PASSWORD,DATABASE) or die('Error connecting to database...'.mysqli_error());
-?>
 ?>
