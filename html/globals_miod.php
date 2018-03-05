@@ -68,4 +68,3 @@
     define('DATABASE', 'miod');
     $db = mysqli_connect(SERVER,USERNAME,PASSWORD,DATABASE) or die('Error connecting to database...'.mysqli_error());
 ?>
-?>

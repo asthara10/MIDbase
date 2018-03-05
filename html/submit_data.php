@@ -1,24 +1,3 @@
-<html>
-  <head>
-    <title>Contact Us</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="MIOD_styles.css">
-    <!--Import header from patró.html-->
-    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-    <script> 
-    $(function(){
-      $("#header").load("Public_html/patro.html"); 
-    });
-    </script> 
-  </head>
-  <body>
-      <div id="header"></div>
-      <div class="container">
 
 <?php
 
@@ -32,7 +11,6 @@ if ($_REQUEST["miodfile"]){
 	$lines = explode("\n", $infile);
 	//iterating by line
 	foreach ($lines as $line) {
-
 		########
 		##Preprocessing annotation
 		########
@@ -47,16 +25,16 @@ if ($_REQUEST["miodfile"]){
 		//Checking number of fields
 		if ($field_num !== 12){
 			echo '<script type="text/javascript">
-			alert("Error: wrong number of fields");
+			alert("Error: wrong number of fields in line beggining wiht'.$sepline[0].'. Skipping...");
 			</script>';
-			exit("<p>Error: wrong number of fields</p>");
+			continue;
 		}
 
 		//Creating as variables as elements in global array miodfile (each element is a field) Now the elements have the name of the fields. Also checking for empty fields
 		for ($i=0; $i < $field_num; $i++) {
 			if (!$sepline[$i]){
 				echo '<script type="text/javascript">
-				alert("Error: ".$miodfile[$i]." field in ".$sepline[0]." is empty. Please, fill with \"-\" if information is not avalible. Skipping...");
+				alert("Error: "'.$miodfile[$i]." field in ".$sepline[0].' is empty. Please, fill with "-" if information is not avalible. Skipping...);
 				</script>';
 				continue 2;
 			}
@@ -73,9 +51,7 @@ if ($_REQUEST["miodfile"]){
 			Microindel.Name =\''.$MicroindelName.'\';');
 		$exists = mysqli_fetch_array($raw_sql)['Name'];
 		if($exists){
-			echo '<script type="text/javascript">
-			alert("Microindel ".$MicroindelName." already exists. Skipping...");
-			</script>';
+			echo '<script type="text/javascript">alert("Microindel '.$MicroindelName.' already exists. Skipping...");</script>';
 			continue;
 		}
 		//New microindel id (the last plus one)
@@ -91,7 +67,7 @@ if ($_REQUEST["miodfile"]){
 		$idchrom = mysqli_fetch_array($raw_sql)['idChromosome'];
 		if(!$idchrom){
 			echo '<script type="text/javascript">
-			alert("Wrong strand/chromosome in ".$MicroindelName.". Skipping...");
+			alert("Wrong strand/chromosome in '.$MicroindelName.' . Skipping...");
 			</script>';
 			continue;
 		}
@@ -102,7 +78,7 @@ if ($_REQUEST["miodfile"]){
 		$idclinsig = mysqli_fetch_array($raw_sql)['idClinicalSignificance'];
 		if(!$idclinsig){
 			echo '<script type="text/javascript">
-			alert("Wrong Clinical significance in ".$MicroindelName.". Skipping...");
+			alert("Wrong Clinical significance in '.$MicroindelName.'. Skipping...");
 			</script>';
 			continue;
 		}
@@ -137,7 +113,6 @@ if ($_REQUEST["miodfile"]){
 				$diseases_existed[$i] = False;
 				$raw_sql = mysqli_query($id,'SELECT MAX(idDisease) FROM Disease;');
 				$newid = mysqli_fetch_array($raw_sql)['MAX(idDisease)'] + 1 + $diseasecounter;
-				print($newid);
 				$iddiseases[$i] = $newid;
 				$diseasecounter++;
 			}
@@ -171,7 +146,6 @@ if ($_REQUEST["miodfile"]){
 		//2. Gene
 		if (!$gene_existed){
 			$sqlins = mysqli_query($id, "INSERT INTO Gene (idGene, GeneName, idENSEMBL) VALUES ('$idgene', '$GeneName', '$idENSEMBL');");
-			print("INSERT INTO Gene (idGene, GeneName, idENSEMBL) VALUES ('$idgene', '$GeneName', '$idENSEMBL');");
 		}
 		
 		//3. Reference
@@ -516,7 +490,9 @@ else{
 		}
 		
 		if ($all_correct) {
-	    	echo "New records created successfully";
+	    	echo '<script type="text/javascript">
+		alert("Microindels annotated successfully");
+		</script>';	
 		} 
 	}
 	else {
@@ -528,6 +504,3 @@ else{
 mysqli_close($id);
 
 ?>
-
-	</div>
-</body>
