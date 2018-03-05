@@ -23,20 +23,23 @@
        <div class="columns">
         <div class="first">
           <h3> David Aranda</h3>
-          <a href="http://mmb.irbbarcelona.org/formacio/~dbw20/">Link to David's website </a>
+          <a href="http://mmb.irbbarcelona.org/formacio/~dbw20/"><img scr="../media/david.jpeg" style="width:128px;height:128px;"></a>
         </div>
         <div class = "second">
           <h3> Júlia Mir</h3>
-          <a href="http://mmb.irbbarcelona.org/formacio/~dbw12/"> Link to Júlia's website </a>
+          <a href="http://mmb.irbbarcelona.org/formacio/~dbw12/"> <img scr="../media/julia.jpeg" style="width:128px;height:128px;"></a>
         </div>
       </div>
        <div class="columns">
         <div class="first">
           <h3> Helena Rodriguez</h3>
-          <a href="http://mmb.irbbarcelona.org/formacio/~dbw04/"> Link to Helena's website </a>
+          <a href="http://mmb.irbbarcelona.org/formacio/~dbw04/"> <img scr="../media/helena.jpg" style="width:128px;height:128px;"></a>
         </div>
         <div class = "second">
           <h3> Marta Sanvicente</h3>
-         <a href="http://mmb.irbbarcelona.org/formacio/~dbw15/"> Link to Marta's website </a>
+         <a href="http://mmb.irbbarcelona.org/formacio/~dbw15/"><img scr="../media/marta.jpeg" style="width:128px;height:128px;"> </a>
+        </div>
+      </div>
+    <div class="text"><p>Here you have the link to our github:<a href="https://github.com/asthara10/MIOD">MIOD's github</a></p></div>
   </body>
 </html>
