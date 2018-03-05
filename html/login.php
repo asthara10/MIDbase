@@ -1,12 +1,9 @@
 <?php
-   require("config.php");
+   require("globals_miod.php");
    session_start();
-
-   echo "hey_1!!";
    
    if($_SERVER["REQUEST_METHOD"] == "POST") {
-      // username and password sent from form 
-      echo "hey_2!";
+      // username and password sent from form
       
       $myusername = mysqli_real_escape_string($db,$_POST['uname']);
       $mypassword = mysqli_real_escape_string($db,$_POST['psw']); 
@@ -25,8 +22,10 @@
          
          //header("location: login.html");
       }else {
-         $error = "Your Login Name or Password is invalid";
-         echo $error;
+	echo '<script type="text/javascript">
+				alert("Your login name or password is invalid");
+	      </script>';
+	header('location: Public_html/MIOD.html');
       }
       
       if (isset($_SESSION['username'])){
