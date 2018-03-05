@@ -24,7 +24,7 @@
   <div class="container">
     <p id="com_text">Fill in the form below or upload a miod file:
     <br>
-    <small><a href="./miod_template.txt">What's a miod file?</a></small> 
+    <small><a href="./miod_template.txt" download="miod_file_example.txt">What's a miod file?</a></small> 
     </p>
     <form method="post" action="../submit_data.php" name="input">
       <p><input name="miodfile" type="file"></p>
