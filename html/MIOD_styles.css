@@ -1,19 +1,14 @@
-.container {
-  margin-left:50px;
-  padding:20px;
-  :center;
-}
 
 .columns {
   overflow:hidden;
   justify-content: center;
   text-align: justify;
-
 }
 .first {
   width:45%;
   float:left;
-  margin:15px;
+  margin:20px;
+  margin-left:50px;
   overflow: hidden;
   display: inline-block;
   justify-content: center;
@@ -24,7 +19,10 @@
   float:left;
   overflow: hidden;
   vertical-align: middle;
-  margin: 15px;
+  margin: 20px;
+}
+.point:before {
+  content:"\2022";
 }
 
 
@@ -203,9 +201,10 @@ span.psw {
 }
 
 .text{
-  margin:15px;
+  margin:20px;
+  margin-left:50px;
+  margin-right:50px;
   text-align: justify;
-  margin: 15px;
 }
 
 /*For the emergin window in login and sign up*/
