@@ -32,7 +32,7 @@
       if (isset($_SESSION['username'])){
 	$_SESSION['username'] = $username;
         $_SESSION['success'] = "You are now logged in";
-        header('location: MIODform.html');
+        header('location: Public_html/MIODform.html');
       }
    }
 

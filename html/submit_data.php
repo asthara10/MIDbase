@@ -12,7 +12,7 @@
     <script src="//code.jquery.com/jquery-1.10.2.js"></script>
     <script> 
     $(function(){
-      $("#header").load("patró.html"); 
+      $("#header").load("Public_html/patro.html"); 
     });
     </script> 
   </head>
@@ -46,14 +46,18 @@ if ($_REQUEST["miodfile"]){
 
 		//Checking number of fields
 		if ($field_num !== 12){
-			print("<p>Error: wrong number of fields</p>");
+			echo '<script type="text/javascript">
+			alert("Error: wrong number of fields");
+			</script>';
 			exit("<p>Error: wrong number of fields</p>");
 		}
 
 		//Creating as variables as elements in global array miodfile (each element is a field) Now the elements have the name of the fields. Also checking for empty fields
 		for ($i=0; $i < $field_num; $i++) {
 			if (!$sepline[$i]){
-				print("<p>Error: ".$miodfile[$i]." field in ".$sepline[0]." is empty. Please, fill with \"-\" if information is not avalible. Skipping...</p>");
+				echo '<script type="text/javascript">
+				alert("Error: ".$miodfile[$i]." field in ".$sepline[0]." is empty. Please, fill with \"-\" if information is not avalible. Skipping...");
+				</script>';
 				continue 2;
 			}
 			$tocode = "$".$miodfile[$i]."=\"".$sepline[$i]."\";";
@@ -69,7 +73,9 @@ if ($_REQUEST["miodfile"]){
 			Microindel.Name =\''.$MicroindelName.'\';');
 		$exists = mysqli_fetch_array($raw_sql)['Name'];
 		if($exists){
-			print("<p>Microindel ".$MicroindelName." already exists. Skipping...</p>");
+			echo '<script type="text/javascript">
+			alert("Microindel ".$MicroindelName." already exists. Skipping...");
+			</script>';
 			continue;
 		}
 		//New microindel id (the last plus one)
@@ -84,7 +90,9 @@ if ($_REQUEST["miodfile"]){
 			Chromosome.Strand = \''.$Strand.'\';');
 		$idchrom = mysqli_fetch_array($raw_sql)['idChromosome'];
 		if(!$idchrom){
-			print("<p>Wrong strand/chromosome in ".$MicroindelName.". Skipping...</p>");
+			echo '<script type="text/javascript">
+			alert("Wrong strand/chromosome in ".$MicroindelName.". Skipping...");
+			</script>';
 			continue;
 		}
 
@@ -93,7 +101,9 @@ if ($_REQUEST["miodfile"]){
 			ClinicalSignificance.Value =\''.$Value.'\';');
 		$idclinsig = mysqli_fetch_array($raw_sql)['idClinicalSignificance'];
 		if(!$idclinsig){
-			print("<p>Wrong Clinical significance in ".$MicroindelName.". Skipping...</p>");
+			echo '<script type="text/javascript">
+			alert("Wrong Clinical significance in ".$MicroindelName.". Skipping...");
+			</script>';
 			continue;
 		}
 
@@ -423,9 +433,6 @@ else{
 				if (mysqli_num_rows($result) > 0) {
 					$row = mysqli_fetch_assoc($result);
 					$location_id = $row["idChromosome"];
-					echo '<script type="text/javascript">
-					alert('.$location_id.');
-					</script>';	
 				} 
 			}
 		}
