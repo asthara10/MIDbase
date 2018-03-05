@@ -1,3 +1,9 @@
+.container {
+  margin-left:50px;
+  padding:20px;
+  :center;
+}
+
 .columns {
   overflow:hidden;
   justify-content: center;
