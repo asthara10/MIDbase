@@ -1,16 +1,30 @@
+<html>
+  <head>
+    <title>Contact Us</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="MIOD_styles.css">
+    <!--Import header from patró.html-->
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script> 
+    $(function(){
+      $("#header").load("patró.html"); 
+    });
+    </script> 
+
+  </head>
+  <body>
+      <div id="header"></div>
+      <div class="container" class="contact" >
+
 <?php
 
 //Include globals
 include "globals_miod.php";
-echo "no syntax errors\n";
-$empty = True;
-
-//Function to print matrices
-function arrayprint($array){
-	foreach ($array as $key => $value) {
-		echo $key," ",$value,"\n";
-	}
-}
 
 //Work with file
 if ($_REQUEST["miodfile"]){
@@ -314,7 +328,7 @@ else{
 					}
 					$pmid_id = $actual_id+1;
 
-					$sql = "INSERT INTO Reference (idReference, PMID) VALUES ('$pmid_id','$pmid');";	
+					$sql = "INSERT INTO Reference (idReference, PMID, DB) VALUES ('$pmid_id','$pmid','miod');";	
 					if (!mysqli_query($id, $sql)) {
 						echo "Error: " . $sql . "<br>" . mysqli_error($id);
 					}
@@ -384,18 +398,18 @@ else{
 			$tempchr = $_REQUEST["chr"];
 			$tempstrand = $_REQUEST["strand"];
 
-			$request = "SELECT idLocation FROM Location WHERE Chromosome='$tempchr' AND Strand='$tempstrand';";
+			$request = "SELECT idChromosome FROM Chromosome WHERE Chromosome='$tempchr' AND Strand='$tempstrand';";
 			$check_exist = mysqli_query($id, $request);
 			$no_exist = empty(mysqli_num_rows($check_exist));
 
 			if($no_exist){
-				$queryActuaId = "SELECT MAX(idLocation) FROM Location;";
+				$queryActuaId = "SELECT MAX(idChromosome) FROM Chromosome;";
 				$result = mysqli_query($id, $queryActuaId);
 				$actual_id = 0;
 				if (!empty($result)) {
 					if (mysqli_num_rows($result) > 0) {
 						$row = mysqli_fetch_assoc($result);
-						$actual_id = $row["MAX(idLocation)"];
+						$actual_id = $row["MAX(idChromosome)"];
 					} else {
 						$actual_id = 0;
 					}
@@ -405,11 +419,11 @@ else{
 				$location_id = $actual_id+1;		
 			}
 			else {
-				$queryId = "SELECT idLocation FROM Location WHERE Chromosome='$tempchr' AND Strand='$tempstrand';";
+				$queryId = "SELECT idChromosome FROM Chromosome WHERE Chromosome='$tempchr' AND Strand='$tempstrand';";
 				$result = mysqli_query($id, $queryId);
 				if (mysqli_num_rows($result) > 0) {
 					$row = mysqli_fetch_assoc($result);
-					$location_id = $row["idLocation"];
+					$location_id = $row["idChromosome"];
 					echo '<script type="text/javascript">
 					alert('.$location_id.');
 					</script>';	
@@ -485,12 +499,6 @@ else{
 				$all_correct = false;
 				echo "Error: " . $sqlref . "<br>" . mysqli_error($id);	
 			}
-		}
-
-		$sqlloc = "INSERT INTO Location (idLocation, Chromosome, Strand) VALUES ('$location_id', '$tempchr', '$tempstrand');";
-		if (!mysqli_query($id, $sqlloc)) {
-			$all_correct = false;
-			echo "Error: " . $sqlloc . "<br>" . mysqli_error($id);	
 		}
 
 		foreach ($disease_id as $disid) {
