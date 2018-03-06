@@ -45,7 +45,7 @@
 		<input class="form-control mr-sm-2" type="search" name="query" placeholder="Search" aria-label="Search">
 		<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
 		</form>
-		<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="button">Login</button>
+		<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="button">Change User</button>
 		<div id="id01" class="modal">
 		    <form class="modal-content animate popup" action="./login.php" method="post">
 		      <div class="container">
