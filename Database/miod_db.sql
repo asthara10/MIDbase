@@ -275,7 +275,7 @@ CREATE TABLE miod.Members (
 DROP TABLE IF EXISTS `Comments`;
 /* Create a the members table */
 CREATE TABLE miod.Comments (
-    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    idcomment INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     email VARCHAR(50) NOT NULL,
     comment TEXT NOT NULL
 ) ENGINE = InnoDB;

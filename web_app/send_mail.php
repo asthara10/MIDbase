@@ -6,10 +6,18 @@ include "globals_miod.php";
 $from = NULL;
 $message = NULL;
 
-if (!empty($_REQUEST['email_address'])) and (!empty($_REQUEST['comments'])) {
+if (!$_REQUEST['email_address'] and !$_REQUEST['comments']){
+	//Return to mainpage if empty
+	header("Location: ./public_html/Contact.php");
+}
+elseif ($_REQUEST['email_address'] and $_REQUEST['comments']) {
 	// Store messages on sql
 	$from = $_REQUEST['email_address'];
 	$message = $_REQUEST['comments'];
+
+	//avoid injection
+	$from = mysqli_real_escape_string($id, $from);
+	$message = mysqli_real_escape_string($id, $message);
 
 	$sql = "INSERT INTO Comments (email, comment) VALUES ('$from', '$message');";
 		if (mysqli_query($id, $sql)) {
