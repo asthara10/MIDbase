@@ -58,7 +58,7 @@
 		        <button type="submit" class="button3">Login</button>
 		        <label>
 		        <input type="checkbox" checked="checked"> Remember me</label>
-		        <button type="button" onclick="window.location.href='./miod_scripts/logout.php'" class="cancelbtn">Cancel</button>
+		        <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
 		      </div>
 		    </form>
 		  </div>

@@ -20,12 +20,12 @@
   <body>
       <div id="header"></div>
       <div class="container" class="contact" >
-        <p> This is a submit form in case you need to contact us for any reason, like problems with your data, our website or any questions about the project. <br>We recommend you to use the first line of the message to say wha kind of message it is (question, complain, suggestion, etc).</p>
+        <p> This is a submit form in case you need to contact us for any reason, like problems with your data, our website or any questions about the project. <br>We recommend you to use the first line of the message to say what kind of message it is (question, complain, suggestion, etc).</p>
         <form method="post" action="./miod_scripts/send_mail.php" name="input">
           <p><label>Email <input placeholder="Your Email" type="email" name="email_address" size="100" ></label></p>
           <p><label>Comments<br><textarea placeholder="Your message" name="comments" maxlength="1000" cols="120" rows="10"></textarea></label></p>
           <div class="columns">
-            <p><button class="first2 button3" id="clear">Clear text</button></p>
+            <p><button class="first2 button3" id="clear"><input type="reset" value="Reset">Clear text</button></p>
             <p><button class="second2 button3" id="send">Send</button></p>
           </div>
         </form>
