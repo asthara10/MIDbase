@@ -19,27 +19,29 @@
   
   <body>
   <div id="header"></div>
-          <div class="text"><p>These are the website of the creators of this project:</p></div>
-       <div class="columns">
+      <div class="text" style="text-align: center"><p>For more information about miod authors, you can visit our personal webpages:</p></div>
+       <div class="columns" style="text-align: center">
         <div class="first">
           <h3> David Aranda</h3>
-          <a href="http://mmb.irbbarcelona.org/formacio/~dbw20/"><img scr="../media/david.jpeg" style="width:128px;height:128px;"></a>
+          <a href="http://mmb.irbbarcelona.org/formacio/~dbw20/"><img src="../media/david.png" style="width:128px;height:128px;"></a>
         </div>
         <div class = "second">
           <h3> Júlia Mir</h3>
-          <a href="http://mmb.irbbarcelona.org/formacio/~dbw12/"> <img scr="../media/julia.jpeg" style="width:128px;height:128px;"></a>
+          <a href="http://mmb.irbbarcelona.org/formacio/~dbw12/"> <img src="../media/julia.jpg" style="width:128px;height:128px;"></a>
         </div>
       </div>
-       <div class="columns">
+       <div class="columns" style="text-align: center">
         <div class="first">
           <h3> Helena Rodriguez</h3>
-          <a href="http://mmb.irbbarcelona.org/formacio/~dbw04/"> <img scr="../media/helena.jpg" style="width:128px;height:128px;"></a>
+          <a href="http://mmb.irbbarcelona.org/formacio/~dbw04/"> <img src="../media/helena.jpg" style="width:128px;height:128px;"></a>
         </div>
         <div class = "second">
           <h3> Marta Sanvicente</h3>
-         <a href="http://mmb.irbbarcelona.org/formacio/~dbw15/"><img scr="../media/marta.jpeg" style="width:128px;height:128px;"> </a>
+         <a href="http://mmb.irbbarcelona.org/formacio/~dbw15/"><img src="../media/marta.jpeg" style="width:128px;height:128px;"> </a>
         </div>
       </div>
-    <div class="text"><p>Here you have the link to our github:<a href="https://github.com/asthara10/MIOD">MIOD's github</a></p></div>
+    <div class="text" style="text-align: center">
+      <p>Find our project in github:</p><a href="https://github.com/asthara10/MIOD"><img src="../media/github.svg" style="width:5% ;height:5%;"></a>
+    </div>
   </body>
 </html>

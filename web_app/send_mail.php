@@ -14,8 +14,9 @@ if (!empty($_REQUEST['email_address'])) and (!empty($_REQUEST['comments'])) {
 	$sql = "INSERT INTO Comments (email, comment) VALUES ('$from', '$message');";
 		if (mysqli_query($id, $sql)) {
 			echo '<script type="text/javascript">
-				alert("Your message has ben submited succesfully :)");
-			</script>';				
+				alert("Your message has ben submited succesfully");
+			</script>';
+			echo '<script>window.location="./public_html/Contact.php"</script>';
 		}
 		else {
 			echo "Error: " . $sqldis . "<br>" . mysqli_error($id);
