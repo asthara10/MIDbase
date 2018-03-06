@@ -13,9 +13,9 @@ if (empty($_REQUEST)) {
 }
 
 //Work with file
-if ($_REQUEST["miodfile"]){
+if ($_FILES['miodfile']['name']){
 	//Extracting file content and dividing it by line
-	$infile = file_get_contents($_REQUEST["miodfile"]);
+	$infile = file_get_contents($_FILES['miodfile']['tmp_name']);
 	$lines = explode("\n", $infile);
 	//iterating by line
 	foreach ($lines as $line) {

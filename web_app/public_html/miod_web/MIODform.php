@@ -27,7 +27,7 @@
     <br>
     <small><a href="./miod_web/miod_template.txt" download="miod_file_example.txt">What's a miod file?</a></small> 
     </p>
-    <form method="post" action="./miod_scripts/submit_data.php" name="input">
+    <form method="POST" action="./miod_scripts/submit_data.php" name="input" enctype="multipart/form-data">
       <p><input name="miodfile" type="file"></p>
       <div class="container" class="form-control" class="form">
         <label>Microindel Name</label><input placeholder="Microindel name" class="form-control" type="text" name="microindel_name">
