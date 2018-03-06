@@ -5,14 +5,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">    
+    <base href="http://mmb.irbbarcelona.org/formacio/~dbw20/">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="MIOD_styles.css">
     <!--Import header from patró.html-->
     <?php 
-      include '../patro.php';
+      include '../miod_scripts/patro.php';
     ?> 
 
   </head>
@@ -20,7 +21,7 @@
   <body>
       <div id="header"></div>
       <div>
-        <form method="GET" action="./advanced_search.php" name="advanced">
+        <form method="GET" action="./miod_scripts/advanced_search.php" name="advanced">
           <div class="container" class="form-control" class="form">
             <label>Name</label><input placeholder="Search by microindel name" class="form-control" type="text" name="Microindel.Name">
           </div>

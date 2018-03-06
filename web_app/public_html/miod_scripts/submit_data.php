@@ -2,7 +2,7 @@
 <?php
 
 //Include globals
-include "globals_miod.php";
+include "../../globals_miod.php";
 
 //initialize all correct true variable
 $all_correct = true;
@@ -523,6 +523,6 @@ alert("All Microindels annotated successfully");
 } 
 
 //Go to original page after alerts
-echo '<script>window.location="./public_html/MIODform.php"</script>';
+echo '<script>window.location="../miod_web/MIODform.php"</script>';
 
 ?>

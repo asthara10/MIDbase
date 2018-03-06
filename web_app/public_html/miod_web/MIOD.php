@@ -4,6 +4,7 @@
     <title>MIOD</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+   <base href="http://mmb.irbbarcelona.org/formacio/~dbw20/">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -12,7 +13,7 @@
     <link rel="stylesheet" href="MIOD_styles.css">
     <!--Import header from patro.html-->
     <?php 
-      include '../patro.php';
+      include '../miod_scripts/patro.php';
     ?> 
 
   </head>

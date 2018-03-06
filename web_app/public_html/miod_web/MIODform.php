@@ -4,6 +4,7 @@
     <title>Introduce Data</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta charset="utf-8">
+   <base href="http://mmb.irbbarcelona.org/formacio/~dbw20/">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <script src="addField.js" language="Javascript" type="text/javascript"></script>
@@ -13,7 +14,7 @@
     <link rel="stylesheet" href="MIOD_styles.css">
     <!--Import header from patró.html-->
     <?php 
-      include '../patro.php';
+      include '../miod_scripts/patro.php';
     ?> 
 
 
@@ -24,9 +25,9 @@
   <div class="container">
     <p id="com_text">Fill in the form below or upload a miod file:
     <br>
-    <small><a href="./miod_template.txt" download="miod_file_example.txt">What's a miod file?</a></small> 
+    <small><a href="./miod_web/miod_template.txt" download="miod_file_example.txt">What's a miod file?</a></small> 
     </p>
-    <form method="post" action="../submit_data.php" name="input">
+    <form method="post" action="./miod_scripts/submit_data.php" name="input">
       <p><input name="miodfile" type="file"></p>
       <div class="container" class="form-control" class="form">
         <label>Microindel Name</label><input placeholder="Microindel name" class="form-control" type="text" name="microindel_name">

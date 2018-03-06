@@ -1,6 +1,6 @@
 <?php
     //Include globals
-    include "./globals_miod.php";
+    include "../../globals_miod.php";
 
     $empty = True;
 
@@ -32,7 +32,7 @@
     }
 
     if ($empty == True) {
-        header('Location: ./public_html/search.html');
+        header('Location: ../miod_web/ad_search.php');
     }
     //return to origin webpage if query is empty
 
@@ -47,7 +47,7 @@
     // if one or more rows are returned do following
 
     if ( !$results and $empty == False){
-        header('Location: ./public_html/noresults.html');
+        header('Location: ../miod_web/noresults.html');
     }
     //Go to noresults.html (still not done) if no result is found and query is not empty
 
@@ -66,8 +66,9 @@
 <head>
     <title>Search</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link rel="stylesheet" type="text/css" href="Public_html/MIOD_styles.css"/>
+    <link rel="stylesheet" type="text/css" href="../miod_web/MIOD_styles.css"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <base href="http://mmb.irbbarcelona.org/formacio/~dbw20/">
     <!--bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <!-- jQuery -->
@@ -96,7 +97,7 @@
                         <?php
                     foreach ($GLOBALS['raw_results'] as $row){
                         echo "
-                        <tr><td><a href=\"output.php?query=",$row['Name'],"\">",$row['Name'],"</a></td>
+                        <tr><td><a href=\"./miod_scripts/output.php?query=",$row['Name'],"\">",$row['Name'],"</a></td>
                         <td>",$row['Value'],"</td>";
                         if($row['DiseaseName'] != "-"){
                             echo "<td>",$row['DiseaseName'],"</td>";

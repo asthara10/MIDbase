@@ -1,5 +1,5 @@
 <?php
-    include "globals_miod.php";
+    include "../../globals_miod.php";
     //include globals
 
     $query = $_GET['query'];
@@ -43,7 +43,7 @@
     //A weird way for obtaining the number of hits
 
     if (empty($results) and $empty !== True){
-        header('Location: public_html/noresults.html');
+        header('Location: ../miod_web/noresults.html');
     }
     //Go to noresults.html (still not done) if no result is found and query is not empty
 
@@ -55,7 +55,7 @@
 <head>
     <title>Search results</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link rel="stylesheet" type="text/css" href="public_html/MIOD_styles.css"/>
+    <link rel="stylesheet" type="text/css" href="../miod_web/MIOD_styles.css"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <!--bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -85,7 +85,7 @@
         				<?php
         			foreach ($GLOBALS['raw_results'] as $row){
         				echo "
-                        <tr><td><a href=\"output.php?query=",$row['Name'],"\">",$row['Name'],"</a></td>
+                        <tr><td><a href=\"./miod_scripts/output.php?query=",$row['Name'],"\">",$row['Name'],"</a></td>
                         <td>",$row['Value'],"</td>";
                         if($row['DiseaseName'] != "-"){
                             echo "<td>",$row['DiseaseName'],"</td>";

@@ -1,5 +1,5 @@
 <?php
-  include "globals_miod.php";
+  include "../../globals_miod.php";
   session_start();
 
   // initializing variables
@@ -18,10 +18,11 @@
     // form validation: ensure that the form is correctly filled ...
     // by adding (array_push()) corresponding error unto $errors array
     if (empty($username)) { 
-	array_push($errors, "Email is required");
+	 array_push($errors, "Email is required");
 	echo '<script type="text/javascript">
 		alert("User name is required");
 	      </script>';
+             echo '<script>window.location="../miod_web/MIOD.php"</script>';
     }
 
     if (empty($email)) { 
@@ -29,6 +30,7 @@
 	echo '<script type="text/javascript">
 		alert("Email name is required");
              </script>';
+             echo '<script>window.location="../miod_web/MIOD.php"</script>';
 		
     }
 
@@ -37,13 +39,15 @@
 	echo '<script type="text/javascript">
 		alert("Email name is required");
              </script>';
+             echo '<script>window.location="../miod_web/MIOD.php"</script>';
     }
 
     if ($password_1 != $password_2) { 
 	array_push($errors, "The two passwords do not match"); 
 	echo '<script type="text/javascript">
 		alert("The two passwords do not match");
-             </script>';	
+             </script>';
+             echo '<script>window.location="../miod_web/MIOD.php"</script>';
     }
     
 
@@ -59,6 +63,8 @@
 	echo '<script type="text/javascript">
 		alert("Username already exists");
              </script>';
+             echo '<script>window.location="../miod_web/MIOD.php"</script>';
+
       }
 
       if ($user['email'] === $email) {
@@ -66,6 +72,7 @@
 	echo '<script type="text/javascript">
 		alert("Email already exists");
              </script>';
+             echo '<script>window.location="../miod_web/MIOD.php"</script>';
       }
     }
 
@@ -78,10 +85,8 @@
       mysqli_query($db, $query);
       $_SESSION['username'] = $username;
       $_SESSION['success'] = "You are now logged in";
-      header('location: public_html/MIOD.php');
-    } else {
-        print_r($errors);
-    }
+      header('Location: ../miod_web/MIOD.php');
+    } 
   }
 
 ?>

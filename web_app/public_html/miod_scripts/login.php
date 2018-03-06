@@ -1,5 +1,5 @@
 <?php   
-   include "globals_miod.php";
+   include "../../globals_miod.php";
 
    $myusername = NULL;
    $_SESSION['username'] = $myusername;
@@ -27,12 +27,13 @@
 	     echo '<script type="text/javascript">
 				alert("Your login name or password is invalid");
 	         </script>';
+         echo '<script>window.location="../miod_web/MIOD.php"</script>';
       }
       
       if (isset($_SESSION['username'])){
 	     $_SESSION['username'] = $myusername;
         $_SESSION['success'] = "You are now logged in";
-        header('location: ./public_html/MIOD.php');
+        header('Location: ../miod_web/MIOD.php');
       }
    }
 

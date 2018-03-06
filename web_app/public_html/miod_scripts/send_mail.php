@@ -1,6 +1,6 @@
 <?php
 
-include "globals_miod.php";
+include "../../globals_miod.php";
 
 // Initializing variables
 $from = NULL;
@@ -8,7 +8,7 @@ $message = NULL;
 
 if (!$_REQUEST['email_address'] and !$_REQUEST['comments']){
 	//Return to mainpage if empty
-	header("Location: ./public_html/Contact.php");
+	header("Location: ../miod_web/Contact.php");
 }
 elseif ($_REQUEST['email_address'] and $_REQUEST['comments']) {
 	// Store messages on sql
@@ -24,7 +24,7 @@ elseif ($_REQUEST['email_address'] and $_REQUEST['comments']) {
 			echo '<script type="text/javascript">
 				alert("Your message has ben submited succesfully");
 			</script>';
-			echo '<script>window.location="./public_html/Contact.php"</script>';
+			echo '<script>window.location="../miod_web/Contact.php"</script>';
 		}
 		else {
 			echo "Error: " . $sqldis . "<br>" . mysqli_error($id);
@@ -35,7 +35,7 @@ else {
 	echo '<script type="text/javascript">
 		alert("E-mail and message are required.");
 	</script>';
-	echo '<script>window.location="./public_html/Contact.php"</script>';
+	echo '<script>window.location="../miod_web/Contact.php"</script>';
 }
 
 ?>

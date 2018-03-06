@@ -1,5 +1,5 @@
  <?php
-    include "globals_miod.php";
+    include "../../globals_miod.php";
     //include globals
 
     include "./patro.php";
@@ -47,7 +47,8 @@
     <title>Search</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <link rel="stylesheet" type="text/css" href="Public_html/MIOD_styles.css"/>
+    <link rel="stylesheet" type="text/css" href="../miod_web/MIOD_styles.css"/>
+   <base href="http://mmb.irbbarcelona.org/formacio/~dbw20/">
     <!--bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <!-- jQuery -->
