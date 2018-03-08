@@ -1,4 +1,4 @@
-# MIDbase
+# MIOD
 MIOD (Micro Indel Open Database) is a data base of microindels and microduplications.   
 
 FOLDERS and FILES    
